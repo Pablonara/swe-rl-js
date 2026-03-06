@@ -1,0 +1,2707 @@
+2026-03-05 22:14:35 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Initializing ZMQEnvServer to serve swe-js (env_args={}, extra_env_kwargs={})
+2026-03-05 22:14:35 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Loading environment swe-js with env_args={}
+2026-03-05 22:14:35 - verifiers.utils.env_utils - INFO - Loading environment: swe-js
+2026-03-05 22:14:35 - verifiers.utils.env_utils - DEBUG - Environment defaults: num_examples=-1, max_turns=100, timeout_per_command=60, test_timeout=300, kwargs=<required>
+2026-03-05 22:14:35 - verifiers.utils.env_utils - INFO - Using default args: test_timeout=300, num_examples=-1, timeout_per_command=60, max_turns=100
+2026-03-05 22:14:41 - verifiers.rubrics.rubric.RubricGroup - DEBUG - Initialized RubricGroup with 2 rubrics
+2026-03-05 22:14:41 - verifiers.utils.env_utils - INFO - Successfully loaded environment 'swe-js'
+2026-03-05 22:14:41 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - ZMQEnvServer started on tcp://127.0.0.1:56121
+2026-03-05 22:14:42 - verifiers.envs.environment.SweJsEnv - DEBUG - Created sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:14:42 - verifiers.envs.environment.SweJsEnv - DEBUG - Waiting for sandbox jjc7cyqix8ynns7jxw7yol96 to be ready
+2026-03-05 22:14:54 - verifiers.envs.environment.SweJsEnv - DEBUG - Waited 12.1s for sandbox to be ready
+2026-03-05 22:14:54 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command apt-get update && apt-get install -y git in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:07 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 12.8s. Got output: Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+Fetched 9346 kB in 1s (6231 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ca-certificates git-man krb5-locales less libbrotli1 libbsd0 libcbor0.8
+  libcurl3-gnutls libedit2 liberror-perl libexpat1 libfido2-1 libgdbm-compat4
+  libgdbm6 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3
+  libkrb5support0 libldap-2.5-0 libldap-common libnghttp2-14 libperl5.36
+  libpsl5 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1
+  libssl3 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1
+  netbase openssh-client openssl patch perl perl-modules-5.36 publicsuffix
+  xauth
+Suggested packages:
+  gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui
+  gitk gitweb git-cvs git-mediawiki git-svn gdbm-l10n krb5-doc krb5-user
+  sensible-utils libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql keychain
+  libpam-ssh monkeysphere ssh-askpass ed diffutils-doc perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make
+  libtap-harness-archive-perl
+The following NEW packages will be installed:
+  ca-certificates git git-man krb5-locales less libbrotli1 libbsd0 libcbor0.8
+  libcurl3-gnutls libedit2 liberror-perl libexpat1 libfido2-1 libgdbm-compat4
+  libgdbm6 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3
+  libkrb5support0 libldap-2.5-0 libldap-common libnghttp2-14 libperl5.36
+  libpsl5 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1
+  libssl3 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1
+  netbase openssh-client openssl patch perl perl-modules-5.36 publicsuffix
+  xauth
+0 upgraded, 46 newly installed, 0 to remove and 0 not upgraded.
+Need to get 25.5 MB of archives.
+After this operation, 124 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 perl-modules-5.36 all 5.36.0-7+deb12u3 [2815 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 libgdbm6 amd64 1.23-3 [72.2 kB]
+Get:3 http://deb.debian.org/debian bookworm/main amd64 libgdbm-compat4 amd64 1.23-3 [48.2 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 libperl5.36 amd64 5.36.0-7+deb12u3 [4196 kB]
+Get:5 http://deb.debian.org/debian bookworm/main amd64 perl amd64 5.36.0-7+deb12u3 [239 kB]
+Get:6 http://deb.debian.org/debian bookworm/main amd64 less amd64 590-2.1~deb12u2 [132 kB]
+Get:7 http://deb.debian.org/debian bookworm/main amd64 netbase all 6.4 [12.8 kB]
+Get:8 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl3 amd64 3.0.18-1~deb12u2 [2030 kB]
+Get:9 http://deb.debian.org/debian-security bookworm-security/main amd64 openssl amd64 3.0.18-1~deb12u2 [1433 kB]
+Get:10 http://deb.debian.org/debian bookworm/main amd64 ca-certificates all 20230311+deb12u1 [155 kB]
+Get:11 http://deb.debian.org/debian bookworm/main amd64 krb5-locales all 1.20.1-2+deb12u4 [63.4 kB]
+Get:12 http://deb.debian.org/debian bookworm/main amd64 libbsd0 amd64 0.11.7-2 [117 kB]
+Get:13 http://deb.debian.org/debian bookworm/main amd64 libedit2 amd64 3.1-20221030-2 [93.0 kB]
+Get:14 http://deb.debian.org/debian bookworm/main amd64 libcbor0.8 amd64 0.8.0-2+b1 [27.4 kB]
+Get:15 http://deb.debian.org/debian bookworm/main amd64 libfido2-1 amd64 1.12.0-2+b1 [77.2 kB]
+Get:16 http://deb.debian.org/debian bookworm/main amd64 libkrb5support0 amd64 1.20.1-2+deb12u4 [33.2 kB]
+Get:17 http://deb.debian.org/debian bookworm/main amd64 libk5crypto3 amd64 1.20.1-2+deb12u4 [79.8 kB]
+Get:18 http://deb.debian.org/debian bookworm/main amd64 libkeyutils1 amd64 1.6.3-2 [8808 B]
+Get:19 http://deb.debian.org/debian bookworm/main amd64 libkrb5-3 amd64 1.20.1-2+deb12u4 [334 kB]
+Get:20 http://deb.debian.org/debian bookworm/main amd64 libgssapi-krb5-2 amd64 1.20.1-2+deb12u4 [135 kB]
+Get:21 http://deb.debian.org/debian bookworm/main amd64 openssh-client amd64 1:9.2p1-2+deb12u7 [992 kB]
+Get:22 http://deb.debian.org/debian bookworm/main amd64 libbrotli1 amd64 1.0.9-2+b6 [275 kB]
+Get:23 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg-10 [20.3 kB]
+Get:24 http://deb.debian.org/debian bookworm/main amd64 libsasl2-2 amd64 2.1.28+dfsg-10 [59.7 kB]
+Get:25 http://deb.debian.org/debian bookworm/main amd64 libldap-2.5-0 amd64 2.5.13+dfsg-5 [183 kB]
+Get:26 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u2 [73.0 kB]
+Get:27 http://deb.debian.org/debian bookworm/main amd64 libpsl5 amd64 0.21.2-1 [58.7 kB]
+Get:28 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+Get:29 http://deb.debian.org/debian bookworm/main amd64 libssh2-1 amd64 1.10.0-3+b1 [179 kB]
+Get:30 http://deb.debian.org/debian bookworm/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u14 [386 kB]
+Get:31 http://deb.debian.org/debian bookworm/main amd64 libexpat1 amd64 2.5.0-1+deb12u2 [99.9 kB]
+Get:32 http://deb.debian.org/debian bookworm/main amd64 liberror-perl all 0.17029-2 [29.0 kB]
+Get:33 http://deb.debian.org/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u3 [2053 kB]
+Get:34 http://deb.debian.org/debian bookworm/main amd64 git amd64 1:2.39.5-0+deb12u3 [7264 kB]
+Get:35 http://deb.debian.org/debian bookworm/main amd64 libldap-common all 2.5.13+dfsg-5 [29.3 kB]
+Get:36 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules amd64 2.1.28+dfsg-10 [66.6 kB]
+Get:37 http://deb.debian.org/debian bookworm/main amd64 libxau6 amd64 1:1.0.9-1 [19.7 kB]
+Get:38 http://deb.debian.org/debian bookworm/main amd64 libxdmcp6 amd64 1:1.1.2-3 [26.3 kB]
+Get:39 http://deb.debian.org/debian bookworm/main amd64 libxcb1 amd64 1.15-1 [144 kB]
+Get:40 http://deb.debian.org/debian bookworm/main amd64 libx11-data all 2:1.8.4-2+deb12u2 [292 kB]
+Get:41 http://deb.debian.org/debian bookworm/main amd64 libx11-6 amd64 2:1.8.4-2+deb12u2 [760 kB]
+Get:42 http://deb.debian.org/debian bookworm/main amd64 libxext6 amd64 2:1.3.4-1+b1 [52.9 kB]
+Get:43 http://deb.debian.org/debian bookworm/main amd64 libxmuu1 amd64 2:1.1.3-3 [23.9 kB]
+Get:44 http://deb.debian.org/debian bookworm/main amd64 patch amd64 2.7.6-7 [128 kB]
+Get:45 http://deb.debian.org/debian bookworm/main amd64 publicsuffix all 20230209.2326-1 [126 kB]
+Get:46 http://deb.debian.org/debian bookworm/main amd64 xauth amd64 1:1.1.2-1 [36.0 kB]
+Fetched 25.5 MB in 0s (63.7 MB/s)
+Selecting previously unselected package perl-modules-5.36.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6096 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.36_5.36.0-7+deb12u3_all.deb ...
+Unpacking perl-modules-5.36 (5.36.0-7+deb12u3) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-3_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-3) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-3_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-3) ...
+Selecting previously unselected package libperl5.36:amd64.
+Preparing to unpack .../03-libperl5.36_5.36.0-7+deb12u3_amd64.deb ...
+Unpacking libperl5.36:amd64 (5.36.0-7+deb12u3) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.36.0-7+deb12u3_amd64.deb ...
+Unpacking perl (5.36.0-7+deb12u3) ...
+Selecting previously unselected package less.
+Preparing to unpack .../05-less_590-2.1~deb12u2_amd64.deb ...
+Unpacking less (590-2.1~deb12u2) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../06-netbase_6.4_all.deb ...
+Unpacking netbase (6.4) ...
+Selecting previously unselected package libssl3:amd64.
+Preparing to unpack .../07-libssl3_3.0.18-1~deb12u2_amd64.deb ...
+Unpacking libssl3:amd64 (3.0.18-1~deb12u2) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../08-openssl_3.0.18-1~deb12u2_amd64.deb ...
+Unpacking openssl (3.0.18-1~deb12u2) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../09-ca-certificates_20230311+deb12u1_all.deb ...
+Unpacking ca-certificates (20230311+deb12u1) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../10-krb5-locales_1.20.1-2+deb12u4_all.deb ...
+Unpacking krb5-locales (1.20.1-2+deb12u4) ...
+Selecting previously unselected package libbsd0:amd64.
+Preparing to unpack .../11-libbsd0_0.11.7-2_amd64.deb ...
+Unpacking libbsd0:amd64 (0.11.7-2) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../12-libedit2_3.1-20221030-2_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20221030-2) ...
+Selecting previously unselected package libcbor0.8:amd64.
+Preparing to unpack .../13-libcbor0.8_0.8.0-2+b1_amd64.deb ...
+Unpacking libcbor0.8:amd64 (0.8.0-2+b1) ...
+Selecting previously unselected package libfido2-1:amd64.
+Preparing to unpack .../14-libfido2-1_1.12.0-2+b1_amd64.deb ...
+Unpacking libfido2-1:amd64 (1.12.0-2+b1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../15-libkrb5support0_1.20.1-2+deb12u4_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-2+deb12u4) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../16-libk5crypto3_1.20.1-2+deb12u4_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-2+deb12u4) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../17-libkeyutils1_1.6.3-2_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../18-libkrb5-3_1.20.1-2+deb12u4_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-2+deb12u4) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../19-libgssapi-krb5-2_1.20.1-2+deb12u4_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-2+deb12u4) ...
+Selecting previously unselected package openssh-client.
+Preparing to unpack .../20-openssh-client_1%3a9.2p1-2+deb12u7_amd64.deb ...
+Unpacking openssh-client (1:9.2p1-2+deb12u7) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../21-libbrotli1_1.0.9-2+b6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2+b6) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../22-libsasl2-modules-db_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../23-libsasl2-2_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../24-libldap-2.5-0_2.5.13+dfsg-5_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../25-libnghttp2-14_1.52.0-1+deb12u2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../26-libpsl5_0.21.2-1_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.2-1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../27-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../28-libssh2-1_1.10.0-3+b1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.10.0-3+b1) ...
+Selecting previously unselected package libcurl3-gnutls:amd64.
+Preparing to unpack .../29-libcurl3-gnutls_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u14) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../30-libexpat1_2.5.0-1+deb12u2_amd64.deb ...
+Unpacking libexpat1:amd64 (2.5.0-1+deb12u2) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../31-liberror-perl_0.17029-2_all.deb ...
+Unpacking liberror-perl (0.17029-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../32-git-man_1%3a2.39.5-0+deb12u3_all.deb ...
+Unpacking git-man (1:2.39.5-0+deb12u3) ...
+Selecting previously unselected package git.
+Preparing to unpack .../33-git_1%3a2.39.5-0+deb12u3_amd64.deb ...
+Unpacking git (1:2.39.5-0+deb12u3) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../34-libldap-common_2.5.13+dfsg-5_all.deb ...
+Unpacking libldap-common (2.5.13+dfsg-5) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../35-libsasl2-modules_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../36-libxau6_1%3a1.0.9-1_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../37-libxdmcp6_1%3a1.1.2-3_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.2-3) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../38-libxcb1_1.15-1_amd64.deb ...
+Unpacking libxcb1:amd64 (1.15-1) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../39-libx11-data_2%3a1.8.4-2+deb12u2_all.deb ...
+Unpacking libx11-data (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../40-libx11-6_2%3a1.8.4-2+deb12u2_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../41-libxext6_2%3a1.3.4-1+b1_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1+b1) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../42-libxmuu1_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../43-patch_2.7.6-7_amd64.deb ...
+Unpacking patch (2.7.6-7) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../44-publicsuffix_20230209.2326-1_all.deb ...
+Unpacking publicsuffix (20230209.2326-1) ...
+Selecting previously unselected package xauth.
+Preparing to unpack .../45-xauth_1%3a1.1.2-1_amd64.deb ...
+Unpacking xauth (1:1.1.2-1) ...
+Setting up libexpat1:amd64 (2.5.0-1+deb12u2) ...
+Setting up libxau6:amd64 (1:1.0.9-1) ...
+Setting up libkeyutils1:amd64 (1.6.3-2) ...
+Setting up libpsl5:amd64 (0.21.2-1) ...
+Setting up libcbor0.8:amd64 (0.8.0-2+b1) ...
+Setting up libbrotli1:amd64 (1.0.9-2+b6) ...
+Setting up libssl3:amd64 (3.0.18-1~deb12u2) ...
+Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Setting up less (590-2.1~deb12u2) ...
+Setting up krb5-locales (1.20.1-2+deb12u4) ...
+Setting up libldap-common (2.5.13+dfsg-5) ...
+Setting up libkrb5support0:amd64 (1.20.1-2+deb12u4) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+Setting up perl-modules-5.36 (5.36.0-7+deb12u3) ...
+Setting up libx11-data (2:1.8.4-2+deb12u2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Setting up patch (2.7.6-7) ...
+Setting up libk5crypto3:amd64 (1.20.1-2+deb12u4) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+Setting up git-man (1:2.39.5-0+deb12u3) ...
+Setting up libssh2-1:amd64 (1.10.0-3+b1) ...
+Setting up netbase (6.4) ...
+Setting up libkrb5-3:amd64 (1.20.1-2+deb12u4) ...
+Setting up libfido2-1:amd64 (1.12.0-2+b1) ...
+Setting up openssl (3.0.18-1~deb12u2) ...
+Setting up libbsd0:amd64 (0.11.7-2) ...
+Setting up publicsuffix (20230209.2326-1) ...
+Setting up libgdbm6:amd64 (1.23-3) ...
+Setting up libxdmcp6:amd64 (1:1.1.2-3) ...
+Setting up libxcb1:amd64 (1.15-1) ...
+Setting up libedit2:amd64 (3.1-20221030-2) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+Setting up libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+Setting up ca-certificates (20230311+deb12u1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+142 added, 0 removed; done.
+Setting up libgssapi-krb5-2:amd64 (1.20.1-2+deb12u4) ...
+Setting up libgdbm-compat4:amd64 (1.23-3) ...
+Setting up libx11-6:amd64 (2:1.8.4-2+deb12u2) ...
+Setting up libperl5.36:amd64 (5.36.0-7+deb12u3) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3) ...
+Setting up openssh-client (1:9.2p1-2+deb12u7) ...
+Setting up libxext6:amd64 (2:1.3.4-1+b1) ...
+Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u14) ...
+Setting up perl (5.36.0-7+deb12u3) ...
+Setting up xauth (1:1.1.2-1) ...
+Setting up liberror-perl (0.17029-2) ...
+Setting up git (1:2.39.5-0+deb12u3) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+Processing triggers for ca-certificates (20230311+deb12u1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+stderr:
+debconf: delaying package configuration, since apt-utils is not installed
+2026-03-05 22:15:07 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command git clone https://github.com/swesmith/Automattic__mongoose.5f57a5bb.git /workspace in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:08 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.9s. Got output: stderr:
+Cloning into '/workspace'...
+2026-03-05 22:15:08 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && git checkout Automattic__mongoose.5f57a5bb.func_pm_arg_swap__4qvlr1m6 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:08 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.2s. Got output: branch 'Automattic__mongoose.5f57a5bb.func_pm_arg_swap__4qvlr1m6' set up to track 'origin/Automattic__mongoose.5f57a5bb.func_pm_arg_swap__4qvlr1m6'.
+stderr:
+Switched to a new branch 'Automattic__mongoose.5f57a5bb.func_pm_arg_swap__4qvlr1m6'
+2026-03-05 22:15:08 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm install in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:42 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 33.9s. Got output: added 1074 packages, and audited 1075 packages in 33s
+
+213 packages are looking for funding
+  run `npm fund` for details
+
+27 vulnerabilities (8 low, 9 moderate, 10 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+stderr:
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated calmcard@0.1.1: no longer maintained
+npm warn deprecated nopter@0.3.0: try optionator
+npm warn deprecated urlobj@0.0.11: use universal-url, minurl, relateurl, url-relation
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated eslint-plugin-markdown@5.1.0: Please use @eslint/markdown instead
+npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+npm warn deprecated
+npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+npm warn deprecated tar@6.2.1: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated uuid@2.0.3: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.11.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.0
+npm notice To update run: npm install -g npm@11.11.0
+npm notice
+2026-03-05 22:15:44 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command find /workspace -type f -name "*.js" | grep -E "(index|schema)" | head -20 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:44 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/docs/source/index.js
+/workspace/examples/globalschemas/gs_example.js
+/workspace/examples/globalschemas/person.js
+/workspace/examples/redis-todo/db/index.js
+/workspace/examples/schema/schema.js
+/workspace/examples/schema/storing-schemas-as-json/index.js
+/workspace/index.js
+/workspace/lib/drivers/browser/index.js
+/workspace/lib/drivers/node-mongodb-native/index.js
+/workspace/lib/error/index.js
+/workspace/lib/helpers/indexes/applySchemaCollation.js
+/workspace/lib/helpers/indexes/decorateDiscriminatorIndexOptions.js
+/workspace/lib/helpers/indexes/getRelatedIndexes.js
+/workspace/lib/helpers/indexes/isDefaultIdIndex.js
+/workspace/lib/helpers/indexes/isIndexEqual.js
+/workspace/lib/helpers/indexes/isIndexSpecEqual.js
+/workspace/lib/helpers/indexes/isTextIndex.js
+/workspace/lib/helpers/indexes/isTimeseriesIndex.js
+/workspace/lib/helpers/schema/addAutoId.js
+/workspace/lib/helpers/schema/applyBuiltinPlugins.js
+2026-03-05 22:15:45 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command ls -la /workspace/lib/ in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:45 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: total 913
+drwxr-xr-x 1 root root    720 Mar  6 06:15 .
+drwxr-xr-x 1 root root    700 Mar  6 06:15 ..
+-rw-r--r-- 1 root root  36881 Mar  6 06:15 aggregate.js
+-rw-r--r-- 1 root root   3224 Mar  6 06:15 browser.js
+-rw-r--r-- 1 root root   2720 Mar  6 06:15 browserDocument.js
+drwxr-xr-x 1 root root    240 Mar  6 06:15 cast
+-rw-r--r-- 1 root root  15090 Mar  6 06:15 cast.js
+-rw-r--r-- 1 root root   6687 Mar  6 06:15 collection.js
+-rw-r--r-- 1 root root  61777 Mar  6 06:15 connection.js
+-rw-r--r-- 1 root root    547 Mar  6 06:15 connectionState.js
+-rw-r--r-- 1 root root   1064 Mar  6 06:15 constants.js
+drwxr-xr-x 1 root root    100 Mar  6 06:15 cursor
+-rw-r--r-- 1 root root 164907 Mar  6 06:15 document.js
+-rw-r--r-- 1 root root    492 Mar  6 06:15 documentProvider.js
+-rw-r--r-- 1 root root    161 Mar  6 06:15 driver.js
+drwxr-xr-x 1 root root    100 Mar  6 06:15 drivers
+drwxr-xr-x 1 root root    560 Mar  6 06:15 error
+drwxr-xr-x 1 root root    980 Mar  6 06:15 helpers
+-rw-r--r-- 1 root root    315 Mar  6 06:15 index.js
+-rw-r--r-- 1 root root   1619 Mar  6 06:15 internal.js
+-rw-r--r-- 1 root root 191281 Mar  6 06:15 model.js
+-rw-r--r-- 1 root root    229 Mar  6 06:15 modifiedPathsSnapshot.js
+-rw-r--r-- 1 root root  52039 Mar  6 06:15 mongoose.js
+drwxr-xr-x 1 root root    320 Mar  6 06:15 options
+-rw-r--r-- 1 root root    279 Mar  6 06:15 options.js
+drwxr-xr-x 1 root root    140 Mar  6 06:15 plugins
+-rw-r--r-- 1 root root 182610 Mar  6 06:15 query.js
+-rw-r--r-- 1 root root  11405 Mar  6 06:15 queryHelpers.js
+drwxr-xr-x 1 root root    440 Mar  6 06:15 schema
+-rw-r--r-- 1 root root 103891 Mar  6 06:15 schema.js
+-rw-r--r-- 1 root root  54052 Mar  6 06:15 schemaType.js
+-rw-r--r-- 1 root root   5592 Mar  6 06:15 stateMachine.js
+drwxr-xr-x 1 root root    260 Mar  6 06:15 types
+-rw-r--r-- 1 root root  23487 Mar  6 06:15 utils.js
+-rw-r--r-- 1 root root    775 Mar  6 06:15 validOptions.js
+-rw-r--r-- 1 root root   6526 Mar  6 06:15 virtualType.js
+2026-03-05 22:15:47 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "\.index\s*=" /workspace/lib/schema.js | head -20 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:47 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 2308:Schema.prototype.index = function(fields, options) {
+2026-03-05 22:15:48 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '2308,2330p' /workspace/lib/schema.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:48 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: Schema.prototype.index = function(fields, options) {
+  fields || (fields = {});
+  options || (options = {});
+
+  if (options.expires) {
+    utils.expires(options);
+  }
+  for (const key in fields) {
+    if (this.aliases[key]) {
+      fields = utils.renameObjKey(fields, key, this.aliases[key]);
+    }
+  }
+  for (const field of Object.keys(fields)) {
+    if (fields[field] === 'ascending' || fields[field] === 'asc') {
+      fields[field] = 1;
+    } else if (fields[field] === 'descending' || fields[field] === 'desc') {
+      fields[field] = -1;
+    }
+  }
+
+  for (const existingIndex of this.indexes()) {
+    if (options.name == null && existingIndex[1].name == null && isIndexSpecEqual(existingIndex[0], fields)) {
+      utils.warn(`Duplicate schema index on ${JSON.stringify(fields)} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.`);
+2026-03-05 22:15:49 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '2308,2345p' /workspace/lib/schema.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:49 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: Schema.prototype.index = function(fields, options) {
+  fields || (fields = {});
+  options || (options = {});
+
+  if (options.expires) {
+    utils.expires(options);
+  }
+  for (const key in fields) {
+    if (this.aliases[key]) {
+      fields = utils.renameObjKey(fields, key, this.aliases[key]);
+    }
+  }
+  for (const field of Object.keys(fields)) {
+    if (fields[field] === 'ascending' || fields[field] === 'asc') {
+      fields[field] = 1;
+    } else if (fields[field] === 'descending' || fields[field] === 'desc') {
+      fields[field] = -1;
+    }
+  }
+
+  for (const existingIndex of this.indexes()) {
+    if (options.name == null && existingIndex[1].name == null && isIndexSpecEqual(existingIndex[0], fields)) {
+      utils.warn(`Duplicate schema index on ${JSON.stringify(fields)} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.`);
+    }
+  }
+
+  this._indexes.push([fields, options]);
+  return this;
+};
+
+/**
+ * Sets a schema option.
+ *
+ * #### Example:
+ *
+ *     schema.set('strict'); // 'true' by default
+ *     schema.set('strict', false); // Sets 'strict' to false
+ *     schema.set('strict'); // 'false'
+2026-03-05 22:15:51 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -r "createIndex" /workspace/lib --include="*.js" | grep -v test | grep -v node_modules in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:51 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/lib/collection.js:Collection.prototype.createIndex = function() {
+/workspace/lib/collection.js:  throw new Error('Collection#createIndex unimplemented by driver');
+/workspace/lib/schema.js: * @param {Object} [options] Options to pass to [MongoDB driver's `createIndex()` function](https://mongodb.github.io/node-mongodb-native/4.9/classes/Collection.html#createIndex)
+/workspace/lib/model.js: *     await Customer.collection.createIndex({ age: 1 }); // Index is not in schema
+/workspace/lib/model.js:  await this.createIndexes({ ...options, toCreate: diffIndexesResult.toCreate });
+/workspace/lib/model.js: * Sends `createIndex` commands to mongo for each index declared in the schema.
+/workspace/lib/model.js: * The `createIndex` commands are sent in series.
+/workspace/lib/model.js: * Similar to `ensureIndexes()`, except for it uses the [`createIndex`](https://mongodb.github.io/node-mongodb-native/4.9/classes/Db.html#createIndex)
+/workspace/lib/model.js:Model.createIndexes = async function createIndexes(options) {
+/workspace/lib/model.js:  _checkContext(this, 'createIndexes');
+/workspace/lib/model.js:    throw new MongooseError('Model.createIndexes() no longer accepts a callback');
+/workspace/lib/model.js:    // Just in case `createIndex()` throws a sync error
+/workspace/lib/model.js:      promise = model.collection.createIndex(indexOptions, indexFields);
+2026-03-05 22:15:53 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "Model.createIndexes" /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:53 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 1654:Model.createIndexes = async function createIndexes(options) {
+1658:    throw new MongooseError('Model.createIndexes() no longer accepts a callback');
+2026-03-05 22:15:54 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1654,1710p' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:55 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: Model.createIndexes = async function createIndexes(options) {
+  _checkContext(this, 'createIndexes');
+
+  if (typeof arguments[0] === 'function' || typeof arguments[1] === 'function') {
+    throw new MongooseError('Model.createIndexes() no longer accepts a callback');
+  }
+
+  return this.ensureIndexes(options);
+};
+
+
+/*!
+ * ignore
+ */
+
+function _ensureIndexes(model, options, callback) {
+  const indexes = Array.isArray(options?.toCreate) ? options.toCreate : model.schema.indexes();
+  let indexError;
+
+  options = options || {};
+  const done = function(err) {
+    if (err && !model.$caught) {
+      model.emit('error', err);
+    }
+    model.emit('index', err || indexError);
+    callback && callback(err || indexError);
+  };
+
+  for (const index of indexes) {
+    if (isDefaultIdIndex(index)) {
+      utils.warn('mongoose: Cannot specify a custom index on `_id` for ' +
+        'model name "' + model.modelName + '", ' +
+        'MongoDB does not allow overwriting the default `_id` index. See ' +
+        'https://bit.ly/mongodb-id-index');
+    }
+  }
+
+  if (!indexes.length) {
+    immediate(function() {
+      done();
+    });
+    return;
+  }
+  // Indexes are created one-by-one to support how MongoDB < 2.4 deals
+  // with background indexes.
+
+  const indexSingleDone = function(err, fields, options, name) {
+    model.emit('index-single-done', err, fields, options, name);
+  };
+  const indexSingleStart = function(fields, options) {
+    model.emit('index-single-start', fields, options);
+  };
+
+  const baseSchema = model.schema._baseSchema;
+  const baseSchemaIndexes = baseSchema ? baseSchema.indexes() : [];
+
+  immediate(function() {
+2026-03-05 22:15:56 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1710,1780p' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:56 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: immediate(function() {
+    // If buffering is off, do this manually.
+    if (options._automatic && !model.collection.collection) {
+      model.collection.addQueue(create, []);
+    } else {
+      create();
+    }
+  });
+
+
+  function create() {
+    if (options._automatic) {
+      if (model.schema.options.autoIndex === false ||
+          (model.schema.options.autoIndex == null && model.db.config.autoIndex === false)) {
+        return done();
+      }
+    }
+
+    const index = indexes.shift();
+    if (!index) {
+      return done();
+    }
+    if (options._automatic && index[1]._autoIndex === false) {
+      return create();
+    }
+
+    if (baseSchemaIndexes.find(i => utils.deepEqual(index, i))) {
+      return create();
+    }
+
+    const indexFields = clone(index[0]);
+    const indexOptions = clone(index[1]);
+
+    delete indexOptions._autoIndex;
+    decorateDiscriminatorIndexOptions(model.schema, indexOptions);
+    applyWriteConcern(model.schema, indexOptions);
+    applySchemaCollation(indexOptions, indexFields, model.schema.options);
+
+    indexSingleStart(indexFields, options);
+
+    if ('background' in options) {
+      indexOptions.background = options.background;
+    }
+
+    // Just in case `createIndex()` throws a sync error
+    let promise = null;
+    try {
+      promise = model.collection.createIndex(indexOptions, indexFields);
+    } catch (err) {
+      if (!indexError) {
+        indexError = err;
+      }
+      if (!model.$caught) {
+        model.emit('error', err);
+      }
+
+      indexSingleDone(err, indexFields, indexOptions);
+      create();
+      return;
+    }
+
+    promise.then(
+      name => {
+        indexSingleDone(indexFields, null, indexOptions, name);
+        create();
+      },
+      err => {
+        if (!indexError) {
+          indexError = err;
+        }
+        if (!model.$caught) {
+2026-03-05 22:15:58 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1,50p' /workspace/lib/collection.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:58 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 'use strict';
+
+/*!
+ * Module dependencies.
+ */
+
+const EventEmitter = require('events').EventEmitter;
+const STATES = require('./connectionState');
+const immediate = require('./helpers/immediate');
+
+/**
+ * Abstract Collection constructor
+ *
+ * This is the base class that drivers inherit from and implement.
+ *
+ * @param {String} name name of the collection
+ * @param {Connection} conn A MongooseConnection instance
+ * @param {Object} [opts] optional collection options
+ * @api public
+ */
+
+function Collection(name, conn, opts) {
+  if (opts === void 0) {
+    opts = {};
+  }
+
+  this.opts = opts;
+  this.name = name;
+  this.collectionName = name;
+  this.conn = conn;
+  this.queue = [];
+  this.buffer = !conn?._hasOpened;
+  this.emitter = new EventEmitter();
+
+  if (STATES.connected === this.conn.readyState) {
+    this.onOpen();
+  }
+}
+
+/**
+ * The collection name
+ *
+ * @api public
+ * @property name
+ */
+
+Collection.prototype.name;
+
+/**
+ * The collection name
+2026-03-05 22:15:59 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "createIndex" /workspace/lib/collection.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:15:59 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 151:Collection.prototype.createIndex = function() {
+152:  throw new Error('Collection#createIndex unimplemented by driver');
+2026-03-05 22:16:01 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '151,160p' /workspace/lib/collection.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:01 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: Collection.prototype.createIndex = function() {
+  throw new Error('Collection#createIndex unimplemented by driver');
+};
+
+/**
+ * Abstract method that drivers must implement.
+ */
+
+Collection.prototype.findAndModify = function() {
+  throw new Error('Collection#findAndModify unimplemented by driver');
+2026-03-05 22:16:02 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "createIndex" /workspace/lib/drivers/node-mongodb-native/index.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:02 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 22:16:04 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command ls -la /workspace/lib/drivers/node-mongodb-native/ in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:04 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: total 32
+drwxr-xr-x 1 root root   120 Mar  6 06:15 .
+drwxr-xr-x 1 root root   100 Mar  6 06:15 ..
+-rw-r--r-- 1 root root   126 Mar  6 06:15 bulkWriteResult.js
+-rw-r--r-- 1 root root 14580 Mar  6 06:15 collection.js
+-rw-r--r-- 1 root root 16283 Mar  6 06:15 connection.js
+-rw-r--r-- 1 root root   255 Mar  6 06:15 index.js
+2026-03-05 22:16:05 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "createIndex" /workspace/lib/drivers/node-mongodb-native/collection.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:05 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 22:16:07 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "index" /workspace/lib/drivers/node-mongodb-native/collection.js | head -20 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:07 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 459: * Retrieves information about this collections indexes.
+465:NativeCollection.prototype.getIndexes = NativeCollection.prototype.indexInformation;
+2026-03-05 22:16:09 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -rn "\.createIndex\s*=" /workspace/lib --include="*.js" in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:09 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/lib/collection.js:151:Collection.prototype.createIndex = function() {
+2026-03-05 22:16:11 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command wc -l /workspace/lib/drivers/node-mongodb-native/collection.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:11 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 471 /workspace/lib/drivers/node-mongodb-native/collection.js
+2026-03-05 22:16:12 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat /workspace/lib/drivers/node-mongodb-native/collection.js | head -100 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:12 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 'use strict';
+
+/*!
+ * Module dependencies.
+ */
+
+const MongooseCollection = require('../../collection');
+const MongooseError = require('../../error/mongooseError');
+const Collection = require('mongodb').Collection;
+const ObjectId = require('../../types/objectid');
+const getConstructorName = require('../../helpers/getConstructorName');
+const internalToObjectOptions = require('../../options').internalToObjectOptions;
+const stream = require('stream');
+const util = require('util');
+
+const formatToObjectOptions = Object.freeze({ ...internalToObjectOptions, copyTrustedSymbol: false });
+
+/**
+ * A [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) collection implementation.
+ *
+ * All methods methods from the [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) driver are copied and wrapped in queue management.
+ *
+ * @inherits Collection https://mongodb.github.io/node-mongodb-native/4.9/classes/Collection.html
+ * @api private
+ */
+
+function NativeCollection(name, conn, options) {
+  this.collection = null;
+  this.Promise = options.Promise || Promise;
+  this.modelName = options.modelName;
+  delete options.modelName;
+  this._closed = false;
+  MongooseCollection.apply(this, arguments);
+}
+
+/*!
+ * Inherit from abstract Collection.
+ */
+
+Object.setPrototypeOf(NativeCollection.prototype, MongooseCollection.prototype);
+
+/**
+ * Called when the connection opens.
+ *
+ * @api private
+ */
+
+NativeCollection.prototype.onOpen = function() {
+  this.collection = this.conn.db.collection(this.name);
+  MongooseCollection.prototype.onOpen.call(this);
+  return this.collection;
+};
+
+/**
+ * Called when the connection closes
+ *
+ * @api private
+ */
+
+NativeCollection.prototype.onClose = function(force) {
+  MongooseCollection.prototype.onClose.call(this, force);
+};
+
+/**
+ * Helper to get the collection, in case `this.collection` isn't set yet.
+ * May happen if `bufferCommands` is false and created the model when
+ * Mongoose was disconnected.
+ *
+ * @api private
+ */
+
+NativeCollection.prototype._getCollection = function _getCollection() {
+  if (this.collection) {
+    return this.collection;
+  }
+  if (this.conn.db != null) {
+    this.collection = this.conn.db.collection(this.name);
+    return this.collection;
+  }
+  return null;
+};
+
+/*!
+ * ignore
+ */
+
+const syncCollectionMethods = { watch: true, find: true, aggregate: true };
+
+/**
+ * Copy the collection methods and make them subject to queues
+ * @param {Number|String} I
+ * @api private
+ */
+
+function iter(i) {
+  NativeCollection.prototype[i] = function() {
+    const collection = this._getCollection();
+    const args = Array.from(arguments);
+    const _this = this;
+    const globalDebug = _this &&
+2026-03-05 22:16:14 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat /workspace/lib/drivers/node-mongodb-native/collection.js | grep -A 10 "createIndex" in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:14 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 22:16:15 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '100,200p' /workspace/lib/drivers/node-mongodb-native/collection.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:15 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: const globalDebug = _this &&
+      _this.conn &&
+      _this.conn.base &&
+      _this.conn.base.options &&
+      _this.conn.base.options.debug;
+    const connectionDebug = _this &&
+      _this.conn &&
+      _this.conn.options &&
+      _this.conn.options.debug;
+    const debug = connectionDebug == null ? globalDebug : connectionDebug;
+    const lastArg = arguments[arguments.length - 1];
+    const opId = new ObjectId();
+
+    // If user force closed, queueing will hang forever. See #5664
+    if (this.conn.$wasForceClosed) {
+      const error = new MongooseError('Connection was force closed');
+      if (args.length > 0 &&
+        typeof args[args.length - 1] === 'function') {
+        args[args.length - 1](error);
+        return;
+      } else {
+        throw error;
+      }
+    }
+
+    let _args = args;
+    let callback = null;
+    if (this._shouldBufferCommands() && this.buffer) {
+      this.conn.emit('buffer', {
+        _id: opId,
+        modelName: _this.modelName,
+        collectionName: _this.name,
+        method: i,
+        args: args
+      });
+
+      let callback;
+      let _args = args;
+      let promise = null;
+      let timeout = null;
+      if (syncCollectionMethods[i] && typeof lastArg === 'function') {
+        this.addQueue(i, _args);
+        callback = lastArg;
+      } else if (syncCollectionMethods[i]) {
+        promise = new this.Promise((resolve, reject) => {
+          callback = function collectionOperationCallback(err, res) {
+            if (timeout != null) {
+              clearTimeout(timeout);
+            }
+            if (err != null) {
+              return reject(err);
+            }
+            resolve(res);
+          };
+          _args = args.concat([callback]);
+          this.addQueue(i, _args);
+        });
+      } else if (typeof lastArg === 'function') {
+        callback = function collectionOperationCallback() {
+          if (timeout != null) {
+            clearTimeout(timeout);
+          }
+          return lastArg.apply(this, arguments);
+        };
+        _args = args.slice(0, args.length - 1).concat([callback]);
+      } else {
+        promise = new Promise((resolve, reject) => {
+          callback = function collectionOperationCallback(err, res) {
+            if (timeout != null) {
+              clearTimeout(timeout);
+            }
+            if (err != null) {
+              return reject(err);
+            }
+            resolve(res);
+          };
+          _args = args.concat([callback]);
+          this.addQueue(i, _args);
+        });
+      }
+
+      const bufferTimeoutMS = this._getBufferTimeoutMS();
+      timeout = setTimeout(() => {
+        const removed = this.removeQueue(i, _args);
+        if (removed) {
+          const message = 'Operation `' + this.name + '.' + i + '()` buffering timed out after ' +
+            bufferTimeoutMS + 'ms';
+          const err = new MongooseError(message);
+          this.conn.emit('buffer-end', { _id: opId, modelName: _this.modelName, collectionName: _this.name, method: i, error: err });
+          callback(err);
+        }
+      }, bufferTimeoutMS);
+
+      if (!syncCollectionMethods[i] && typeof lastArg === 'function') {
+        this.addQueue(i, _args);
+        return;
+      }
+
+      return promise;
+    } else if (!syncCollectionMethods[i] && typeof lastArg === 'function') {
+      callback = function collectionOperationCallback(err, res) {
+2026-03-05 22:16:17 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '200,300p' /workspace/lib/drivers/node-mongodb-native/collection.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:17 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: callback = function collectionOperationCallback(err, res) {
+        if (err != null) {
+          _this.conn.emit('operation-end', { _id: opId, modelName: _this.modelName, collectionName: _this.name, method: i, error: err });
+        } else {
+          _this.conn.emit('operation-end', { _id: opId, modelName: _this.modelName, collectionName: _this.name, method: i, result: res });
+        }
+        return lastArg.apply(this, arguments);
+      };
+      _args = args.slice(0, args.length - 1).concat([callback]);
+    }
+
+    if (debug) {
+      if (typeof debug === 'function') {
+        let argsToAdd = null;
+        if (typeof args[args.length - 1] == 'function') {
+          argsToAdd = args.slice(0, args.length - 1);
+        } else {
+          argsToAdd = args;
+        }
+        debug.apply(_this,
+          [_this.name, i].concat(argsToAdd));
+      } else if (debug instanceof stream.Writable) {
+        this.$printToStream(_this.name, i, args, debug);
+      } else {
+        const color = debug.color == null ? true : debug.color;
+        const shell = debug.shell == null ? false : debug.shell;
+        this.$print(_this.name, i, args, color, shell);
+      }
+    }
+
+    this.conn.emit('operation-start', { _id: opId, modelName: _this.modelName, collectionName: this.name, method: i, params: _args });
+
+    try {
+      if (collection == null) {
+        const message = 'Cannot call `' + this.name + '.' + i + '()` before initial connection ' +
+          'is complete if `bufferCommands = false`. Make sure you `await mongoose.connect()` if ' +
+          'you have `bufferCommands = false`.';
+        throw new MongooseError(message);
+      }
+
+      if (syncCollectionMethods[i] && typeof lastArg === 'function') {
+        const result = collection[i].apply(collection, _args.slice(0, _args.length - 1));
+        this.conn.emit('operation-end', { _id: opId, modelName: _this.modelName, collectionName: this.name, method: i, result });
+        return lastArg.call(this, null, result);
+      }
+
+      const ret = collection[i].apply(collection, _args);
+      if (ret != null && typeof ret.then === 'function') {
+        return ret.then(
+          result => {
+            if (typeof lastArg === 'function') {
+              lastArg(null, result);
+            } else {
+              this.conn.emit('operation-end', { _id: opId, modelName: _this.modelName, collectionName: this.name, method: i, result });
+            }
+            return result;
+          },
+          error => {
+            if (typeof lastArg === 'function') {
+              lastArg(error);
+              return;
+            } else {
+              this.conn.emit('operation-end', { _id: opId, modelName: _this.modelName, collectionName: this.name, method: i, error });
+            }
+            throw error;
+          }
+        );
+      }
+      return ret;
+    } catch (error) {
+      // Collection operation may throw because of max bson size, catch it here
+      // See gh-3906
+      if (typeof lastArg === 'function') {
+        return lastArg(error);
+      } else {
+        this.conn.emit('operation-end', { _id: opId, modelName: _this.modelName, collectionName: this.name, method: i, error: error });
+
+        throw error;
+      }
+    }
+  };
+}
+
+for (const key of Object.getOwnPropertyNames(Collection.prototype)) {
+  // Janky hack to work around gh-3005 until we can get rid of the mongoose
+  // collection abstraction
+  const descriptor = Object.getOwnPropertyDescriptor(Collection.prototype, key);
+  // Skip properties with getters because they may throw errors (gh-8528)
+  if (descriptor.get !== undefined) {
+    continue;
+  }
+  if (typeof Collection.prototype[key] !== 'function') {
+    continue;
+  }
+
+  iter(key);
+}
+
+/**
+ * Debug print helper
+ *
+2026-03-05 22:16:18 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm list mongodb in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:20 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 1.4s. Got output: mongoose@8.15.1 /workspace
++-- mongodb-memory-server@10.1.4
+| `-- mongodb-memory-server-core@10.1.4
+|   `-- mongodb@6.16.0 deduped
++-- mongodb-runner@5.11.1
+| `-- mongodb@6.16.0 deduped
+`-- mongodb@6.16.0
+2026-03-05 22:16:21 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command find /workspace -name "*.test.js" -o -name "*.spec.js" | head -5 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:22 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.3s. Got output: /workspace/test/aggregate.test.js
+/workspace/test/bigint.test.js
+/workspace/test/browser.test.js
+/workspace/test/cast.test.js
+/workspace/test/collection.capped.test.js
+2026-03-05 22:16:23 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -r "createIndex" /workspace/test --include="*.js" | head -5 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:23 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/test/model.indexes.test.js:      await M.createIndexes();
+/workspace/test/model.indexes.test.js:      await User.collection.createIndex({ age: 1 });
+/workspace/test/model.indexes.test.js:      await User.collection.createIndex({ weight: 1 });
+/workspace/test/model.insertMany.test.js:    await Movie.createIndexes();
+/workspace/test/model.querying.test.js:        await blogPost.collection.createIndex({ title: 'text' });
+2026-03-05 22:16:26 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat > /tmp/test_bug.js << 'EOF'
+const mongoose = require('/workspace');
+
+async function run() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/testdb');
+
+  const schema = new mongoose.Schema({ name: String });
+  // trying to create an index with options
+  schema.index({ name: 1 }, { background: true, name: 'background_true' });
+
+  const Model = mongoose.model('Person', schema);
+
+  try {
+    await Model.init();
+    console.log('index created successfully');
+  } catch (err) {
+    console.error('Error:', err.message);
+  } finally {
+    await mongoose.disconnect();
+  }
+}
+
+run();
+EOF
+cat /tmp/test_bug.js
+ in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:26 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: const mongoose = require('/workspace');
+
+async function run() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/testdb');
+
+  const schema = new mongoose.Schema({ name: String });
+  // trying to create an index with options
+  schema.index({ name: 1 }, { background: true, name: 'background_true' });
+
+  const Model = mongoose.model('Person', schema);
+
+  try {
+    await Model.init();
+    console.log('index created successfully');
+  } catch (err) {
+    console.error('Error:', err.message);
+  } finally {
+    await mongoose.disconnect();
+  }
+}
+
+run();
+2026-03-05 22:16:27 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -A 2 "\.createIndex(" /workspace/test/model.indexes.test.js | head -20 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:27 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: await User.collection.createIndex({ age: 1 });
+      await User.collection.createIndex({ weight: 1 });
+      await User.init();
+      userSchema.index({ password: 1 });
+2026-03-05 22:16:29 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && node -e "const { Collection } = require('mongodb'); const c = new Collection(null, 'test'); console.log(Collection.prototype.createIndex.toString())" in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:29 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.4s. Got output: stderr:
+/workspace/node_modules/mongodb/lib/collection.js:70
+            namespace: new utils_1.MongoDBCollectionNamespace(db.databaseName, name),
+                                                                 ^
+
+TypeError: Cannot read properties of null (reading 'databaseName')
+    at new Collection (/workspace/node_modules/mongodb/lib/collection.js:70:66)
+    at [eval]:1:54
+    at runScriptInThisContext (node:internal/vm:209:10)
+    at node:internal/process/execution:118:14
+    at [eval]-wrapper:6:24
+    at runScript (node:internal/process/execution:101:62)
+    at evalScript (node:internal/process/execution:133:3)
+    at node:internal/main/eval_string:51:3
+
+Node.js v20.20.0
+2026-03-05 22:16:30 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -A 20 "createIndex(" /workspace/node_modules/mongodb/lib/collection.js | head -30 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:31 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: * await collection.createIndex({ a: 1, b: -1 });
+     *
+     * // Alternate syntax for { c: 1, d: -1 } that ensures order of indexes
+     * await collection.createIndex([ [c, 1], [d, -1] ]);
+     *
+     * // Equivalent to { e: 1 }
+     * await collection.createIndex('e');
+     *
+     * // Equivalent to { f: 1, g: 1 }
+     * await collection.createIndex(['f', 'g'])
+     *
+     * // Equivalent to { h: 1, i: -1 }
+     * await collection.createIndex([ { h: 1 }, { i: -1 } ]);
+     *
+     * // Equivalent to { j: 1, k: -1, l: 2d }
+     * await collection.createIndex(['j', ['k', -1], { l: '2d' }])
+     * ```
+     */
+    async createIndex(indexSpec, options) {
+        const indexes = await (0, execute_operation_1.executeOperation)(this.client, indexes_1.CreateIndexesOperation.fromIndexSpecification(this, this.collectionName, indexSpec, (0, utils_1.resolveOptions)(this, options)));
+        return indexes[0];
+    }
+    /**
+     * Creates multiple indexes in the collection, this method is only supported for
+     * MongoDB 2.6 or higher. Earlier version of MongoDB will throw a command not supported
+     * error.
+     *
+     * **Note**: Unlike {@link Collection#createIndex| createIndex}, this function takes in raw index specifications.
+     * Index specifications are defined {@link https://www.mongodb.com/docs/manual/reference/command/createIndexes/| here}.
+     *
+2026-03-05 22:16:33 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1745,1760p' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:33 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: applyWriteConcern(model.schema, indexOptions);
+    applySchemaCollation(indexOptions, indexFields, model.schema.options);
+
+    indexSingleStart(indexFields, options);
+
+    if ('background' in options) {
+      indexOptions.background = options.background;
+    }
+
+    // Just in case `createIndex()` throws a sync error
+    let promise = null;
+    try {
+      promise = model.collection.createIndex(indexOptions, indexFields);
+    } catch (err) {
+      if (!indexError) {
+        indexError = err;
+2026-03-05 22:16:34 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -i '1754s/model.collection.createIndex(indexOptions, indexFields)/model.collection.createIndex(indexFields, indexOptions)/' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:35 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 22:16:36 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1745,1760p' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:36 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: applyWriteConcern(model.schema, indexOptions);
+    applySchemaCollation(indexOptions, indexFields, model.schema.options);
+
+    indexSingleStart(indexFields, options);
+
+    if ('background' in options) {
+      indexOptions.background = options.background;
+    }
+
+    // Just in case `createIndex()` throws a sync error
+    let promise = null;
+    try {
+      promise = model.collection.createIndex(indexOptions, indexFields);
+    } catch (err) {
+      if (!indexError) {
+        indexError = err;
+2026-03-05 22:16:38 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "promise = model.collection.createIndex" /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:38 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 1757:      promise = model.collection.createIndex(indexOptions, indexFields);
+2026-03-05 22:16:39 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -i '1757s/.*/      promise = model.collection.createIndex(indexFields, indexOptions);/' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:39 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 22:16:40 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1750,1765p' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:40 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: if ('background' in options) {
+      indexOptions.background = options.background;
+    }
+
+    // Just in case `createIndex()` throws a sync error
+    let promise = null;
+    try {
+      promise = model.collection.createIndex(indexFields, indexOptions);
+    } catch (err) {
+      if (!indexError) {
+        indexError = err;
+      }
+      if (!model.$caught) {
+        model.emit('error', err);
+      }
+2026-03-05 22:16:43 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep "index" 2>&1 | head -100 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:48 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 5.0s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep index
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+Downloading MongoDB "7.0.14": 0% (0mb / 80.8mb)
+Downloading MongoDB "7.0.14": 100% (80.8mb / 80.8mb)
+Downloading MongoDB "7.0.14": 100% (0mb / 0mb)
+Starting the MongoMemoryServer Instance failed, enable debug log for more information. Error:
+ StdoutInstanceError: Instance failed to start because a library is missing or cannot be opened: "libcurl.so.4"
+    at MongoInstance.checkErrorInLine (/workspace/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:392:62)
+    at MongoInstance.stderrHandler (/workspace/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:318:14)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+/workspace/test/common.js:189
+  throw error;
+  ^
+
+StdoutInstanceError: Instance failed to start because a library is missing or cannot be opened: "libcurl.so.4"
+    at MongoInstance.checkErrorInLine (/workspace/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:392:62)
+    at MongoInstance.stderrHandler (/workspace/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:318:14)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+
+Node.js v20.20.0
+2026-03-05 22:16:51 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command apt-get update && apt-get install -y libcurl4 2>&1 | tail -20 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:53 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.6s. Got output: Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libcurl4
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 392 kB of archives.
+After this operation, 860 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 392 kB in 0s (3947 kB/s)
+Selecting previously unselected package libcurl4:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10288 files and directories currently installed.)
+Preparing to unpack .../libcurl4_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Setting up libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+2026-03-05 22:16:55 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 120 npm test -- test/model.indexes.test.js 2>&1 | head -200 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:16:59 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 4.4s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js test/model.indexes.test.js
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  aggregate: 
+    ✔ cursor (gh-3160)
+    ✔ catch() (gh-7267)
+    ✔ cursor() without options (gh-3855)
+    ✔ cursor() with useMongooseAggCursor (gh-5145)
+    ✔ cursor() with useMongooseAggCursor works (gh-5145) (gh-5394)
+    ✔ cursor() eachAsync (gh-4300) (115ms)
+    ✔ cursor() eachAsync with options (parallel) (113ms)
+    ✔ is now a proper aggregate cursor vs what it was before gh-10410
+    ✔ query by document (gh-4866)
+    ✔ sort by text score (gh-5258)
+    ✔ cursor supports transform option (gh-14331)
+    ✔ should not throw error if database connection has not been established (gh-13125)
+    ✔ throws error if calling near() with empty coordinates (gh-15188)
+    ✔ cursor() errors out if schema pre aggregate hook throws an error (gh-15279)
+    append
+      ✔ (pipeline)
+      ✔ supports array as single argument
+      ✔ throws if non-operator parameter is passed
+      ✔ does not throw when 0 args passed
+      ✔ does not throw when empty array is passed as single argument
+    project
+      ✔ (object)
+      ✔ (string)
+      ✔ ("a","b","c")
+      ✔ ["a","b","c"]
+    group
+      ✔ works
+    skip
+      ✔ works
+    limit
+      ✔ works
+    unwind
+      ✔ ("field")
+    match
+      ✔ works
+    sort
+      ✔ (object)
+      ✔ (string)
+      ✔ ("a","b","c")
+      ✔ ["a","b","c"]
+    near
+      ✔ works
+      ✔ works with discriminators (gh-3304)
+    lookup
+      ✔ works
+    unionWith
+      ✔ works
+    sample
+      ✔ works
+    densify
+      ✔ works
+    fill
+      ✔ works
+    model()
+      ✔ works
+    redact
+      ✔ works
+      ✔ works with (condition, string, string)
+    Mongo 3.4 operators
+      graphLookup
+        ✔ works
+        ✔ automatically prepends $ to the startWith field
+        ✔ Throws if no options are passed to graphLookup
+      addFields
+        ✔ should throw if passed a non object
+        ✔ should throw if passed null
+        ✔ should throw if passed an Array
+        ✔ (object)
+      facet
+        ✔ works
+      replaceRoot
+        ✔ works with a string
+        ✔ works with an object (gh-6474)
+      count
+        ✔ works
+      sortByCount
+        ✔ works with a string argument
+        ✔ works with an object argument
+        ✔ throws if the argument is neither a string or object
+    exec
+      ✔ project
+      ✔ group
+      ✔ skip
+      ✔ limit
+      ✔ unwind
+      ✔ unwind with obj
+      ✔ unwind throws with bad arg
+      ✔ match
+      ✔ sort
+      ✔ graphLookup
+      ✔ facet
+      ✔ complex pipeline
+      ✔ pipeline() (gh-5825)
+      ✔ explain()
+      ✔ handles aggregation options
+      ✔ readPref from schema (gh-5522)
+      error when empty pipeline
+        ✔ without a callback
+      error when not bound to a model
+        ✔ with callback
+      middleware (gh-5251)
+        ✔ pre
+        ✔ setting option in pre (gh-7606)
+        ✔ adding to pipeline in pre (gh-8017)
+        ✔ post
+        ✔ error handler with agg error
+        ✔ error handler with pre error
+        ✔ with agg cursor
+        ✔ with explain() (gh-5887)
+    Mongo 3.6 options
+      ✔ adds hint option
+
+  BigInt
+    ✔ is a valid schema type
+    ✔ casting from strings and numbers
+    ✔ handles cast errors
+    ✔ supports required
+    MongoDB integration
+      ✔ is stored as a long in MongoDB
+      ✔ becomes a bigint with lean using useBigInt64
+      ✔ can query with comparison operators
+      ✔ supports populate()
+
+  browser
+    ✔ require() works with no other require calls (gh-5842) (134ms)
+    ✔ using schema (gh-7170) (131ms)
+    ✔ document works (gh-4987)
+    ✔ document validation with arrays (gh-6175)
+
+  cast: 
+    ✔ uses nested schema strict by default (gh-11291)
+    ✔ casts $comment (gh-14576)
+    ✔ avoids setting stripped out nested schema values to undefined (gh-11291)
+    ✔ uses schema-level strictQuery over schema-level strict (gh-12508)
+    ✔ handles $in with discriminators if $in has exactly 1 element (gh-13492)
+    ✔ treats unknown operators as passthrough (gh-15170)
+    when casting an array
+      ✔ casts array with ObjectIds to $in query
+      ✔ casts array with ObjectIds to $in query when values are strings
+      ✔ throws when ObjectIds not valid
+      ✔ casts array with Strings to $in query
+      ✔ casts array with Strings when necessary
+      ✔ casts array with Numbers to $in query
+      ✔ casts $in and $nin with empty array (gh-5913) (gh-7806)
+      ✔ casts array with Numbers to $in query when values are strings
+      ✔ throws when Numbers are not valid
+    $all
+      ✔ casts $elemMatch (gh-11314)
+    bitwise query operators: 
+      ✔ with a number
+      ✔ with an array
+      ✔ with a buffer
+      ✔ with int32 (gh-15170)
+      ✔ throws when invalid
+    $expr
+      ✔ does not get filtered out (gh-10662)
+
+  collections: capped:
+    ✔ schemas should have option size
+    ✔ creation (115ms)
+    ✔ skips when setting autoCreate to false (gh-8566)
+
+  collections:
+    ✔ should buffer commands until connection is established
+    ✔ returns a promise if buffering and no callback (gh-7676)
+    ✔ returns a promise if buffering and callback with find() (gh-14184) (101ms)
+    ✔ handles bufferTimeoutMS in schemaUserProvidedOptions (101ms)
+    ✔ methods should that throw (unimplemented)
+    ✔ buffers for sync methods (gh-10610)
+
+  connections:
+    ✔ should allow closing a closed connection
+    ✔ should return an error if malformed uri passed
+    ✔ force close (gh-5664) (104ms)
+    ✔ destroy connection and remove it permanently
+    ✔ verify that attempt to re-open destroyed connection throws error, via promise
+    ✔ verify that attempt to re-open destroyed connection throws error, via callback
+    ✔ force close with connection created after close (gh-5664) (104ms)
+    ✔ bufferCommands (gh-5720)
+    ✔ dbName option (gh-6106)
+    ✔ uses default database in uri if options.dbName is not provided
+    ✔ startSession() (gh-6653)
+    ✔ deleteModel()
+    ✔ throws a MongooseServerSelectionError on server selection timeout (gh-8451) (110ms)
+    ✔ avoids unhandled error on createConnection() if error handler registered (gh-14377) (103ms)
+    - `watch()` on a whole collection (gh-8425)
+    ✔ useDB inherits config from default connection (gh-8267)
+2026-03-05 22:17:04 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 180 npm test -- test/model.indexes.test.js 2>&1 | tail -200 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:18:05 - verifiers.envs.environment.SweJsEnv - WARNING - Command timed out after 60s in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:18:06 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 180 npm test -- --grep "index" --no-exit 2>&1 | tail -150 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:19:07 - verifiers.envs.environment.SweJsEnv - WARNING - Command timed out after 60s in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:19:09 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command head -100 /workspace/test/model.indexes.test.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:19:10 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 'use strict';
+
+/**
+ * Test dependencies.
+ */
+
+const start = require('./common');
+
+const assert = require('assert');
+const random = require('./util').random;
+
+const mongoose = start.mongoose;
+const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
+
+describe('model', function() {
+  let db;
+
+  before(function() {
+    db = start();
+
+    return db.createCollection('Test').catch(() => {});
+  });
+
+  after(async function() {
+    await db.close();
+  });
+
+  beforeEach(() => db.deleteModel(/.*/));
+  afterEach(() => require('./util').clearTestData(db));
+  afterEach(() => require('./util').stopRemainingOps(db));
+
+  describe('indexes', function() {
+    this.timeout(5000);
+
+    it('are created when model is compiled', async function() {
+      const Indexed = new Schema({
+        name: { type: String, index: true },
+        last: String,
+        email: String,
+        date: Date
+      });
+
+      Indexed.index({ last: 1, email: 1 }, { unique: true });
+      Indexed.index({ date: 1 }, { expires: 10 });
+
+      const IndexedModel = db.model('Test', Indexed);
+      let assertions = 0;
+
+      await IndexedModel.init();
+
+      const indexes = await IndexedModel.collection.getIndexes({ full: true });
+
+      indexes.forEach(function(index) {
+        switch (index.name) {
+          case '_id_':
+          case 'name_1':
+          case 'last_1_email_1':
+            assertions++;
+            break;
+          case 'date_1':
+            assertions++;
+            assert.equal(index.expireAfterSeconds, 10);
+            break;
+        }
+      });
+
+      assert.equal(assertions, 4);
+    });
+
+    it('of embedded documents', async function() {
+      const BlogPosts = new Schema({
+        _id: { type: ObjectId, index: true },
+        title: { type: String, index: true },
+        desc: String
+      });
+
+      const User = new Schema({
+        name: { type: String, index: true },
+        blogposts: [BlogPosts]
+      });
+
+      const UserModel = db.model('Test', User);
+      let assertions = 0;
+
+      await UserModel.init();
+
+      const mongoIndexes = Object.values(await UserModel.collection.getIndexes());
+
+      for (const mongoIndex in mongoIndexes) {
+        mongoIndexes[mongoIndex].forEach(function iter(mongoIndex) {
+          if (mongoIndex[0] === 'name') {
+            assertions++;
+          }
+          if (mongoIndex[0] === 'blogposts._id') {
+            assertions++;
+          }
+          if (mongoIndex[0] === 'blogposts.title') {
+            assertions++;
+          }
+2026-03-05 22:19:14 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat > /tmp/test_index_fix.js << 'EOF'
+const mongoose = require('/workspace');
+const start = require('/workspace/test/common');
+
+async function run() {
+  const db = start();
+
+  try {
+    await db.createCollection('Test').catch(() => {});
+    
+    // Test 1: Index with options
+    const schema1 = new mongoose.Schema({ name: String });
+    schema1.index({ name: 1 }, { background: true, name: 'test_background' });
+    
+    const Model1 = db.model('TestModel1', schema1);
+    await Model1.init();
+    
+    const indexes1 = await Model1.collection.getIndexes({ full: true });
+    console.log('Test 1 - Index with background option:');
+    console.log('Indexes:', indexes1);
+    
+    let foundBackgroundIndex = false;
+    indexes1.forEach(idx => {
+      if (idx.name === 'test_background') {
+        console.log('✓ Found index with correct name and options');
+        foundBackgroundIndex = true;
+      }
+    });
+    
+    if (!foundBackgroundIndex) {
+      console.log('✗ Background index not found');
+    }
+
+    // Test 2: Unique index with options
+    const schema2 = new mongoose.Schema({ email: String });
+    schema2.index({ email: 1 }, { unique: true, name: 'test_unique' });
+    
+    const Model2 = db.model('TestModel2', schema2);
+    await Model2.init();
+    
+    const indexes2 = await Model2.collection.getIndexes({ full: true });
+    console.log('\nTest 2 - Index with unique option:');
+    console.log('Indexes:', indexes2);
+    
+    let foundUniqueIndex = false;
+    indexes2.forEach(idx => {
+      if (idx.name === 'test_unique' && idx.unique) {
+        console.log('✓ Found unique index with correct name and options');
+        foundUniqueIndex = true;
+      }
+    });
+    
+    if (!foundUniqueIndex) {
+      console.log('✗ Unique index not found');
+    }
+    
+    console.log('\n✓ All tests passed!');
+  } catch (err) {
+    console.error('Error:', err.message);
+    console.error(err);
+  } finally {
+    await db.close();
+  }
+}
+
+run();
+EOF
+node /tmp/test_index_fix.js 2>&1
+ in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:19:15 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.4s. Got output: /workspace/test/common.js:178
+before(dropDBs);
+^
+
+ReferenceError: before is not defined
+    at Object.<anonymous> (/workspace/test/common.js:178:1)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Module.require (node:internal/modules/cjs/loader:1289:19)
+    at require (node:internal/modules/helpers:182:18)
+    at Object.<anonymous> (/tmp/test_index_fix.js:2:15)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+
+Node.js v20.20.0
+2026-03-05 22:19:19 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat > /tmp/test_index_simple.js << 'EOF'
+const mongoose = require('/workspace');
+
+async function run() {
+  // Start a local mongodb server first
+  const { MongoMemoryServer } = require('mongodb-memory-server');
+  let mongoServer;
+  
+  try {
+    console.log('Starting MongoDB Memory Server...');
+    mongoServer = await MongoMemoryServer.create();
+    const mongoUri = mongoServer.getUri();
+    
+    console.log('Connecting to MongoDB...');
+    await mongoose.connect(mongoUri);
+
+    // Test 1: Index with options
+    console.log('\n=== Test 1: Index with background option ===');
+    const schema1 = new mongoose.Schema({ name: String });
+    schema1.index({ name: 1 }, { background: true, name: 'test_background' });
+    
+    const Model1 = mongoose.model('TestModel1', schema1);
+    await Model1.init();
+    
+    const indexes1 = await Model1.collection.getIndexes({ full: true });
+    console.log('Created indexes:', indexes1.map(i => i.name));
+    
+    let foundBackgroundIndex = false;
+    indexes1.forEach(idx => {
+      if (idx.name === 'test_background') {
+        console.log('✓ Found index with correct name');
+        foundBackgroundIndex = true;
+      }
+    });
+    
+    if (!foundBackgroundIndex) {
+      console.log('✗ Background index not found');
+      console.log('Available indexes:', indexes1);
+    }
+
+    // Test 2: Unique index with options
+    console.log('\n=== Test 2: Index with unique option ===');
+    const schema2 = new mongoose.Schema({ email: String });
+    schema2.index({ email: 1 }, { unique: true, name: 'test_unique' });
+    
+    const Model2 = mongoose.model('TestModel2', schema2);
+    await Model2.init();
+    
+    const indexes2 = await Model2.collection.getIndexes({ full: true });
+    console.log('Created indexes:', indexes2.map(i => i.name));
+    
+    let foundUniqueIndex = false;
+    indexes2.forEach(idx => {
+      if (idx.name === 'test_unique' && idx.unique) {
+        console.log('✓ Found unique index with correct name and options');
+        foundUniqueIndex = true;
+      }
+    });
+    
+    if (!foundUniqueIndex) {
+      console.log('✗ Unique index not found');
+      console.log('Available indexes:', indexes2);
+    }
+    
+    if (foundBackgroundIndex && foundUniqueIndex) {
+      console.log('\n✓ All tests passed!');
+    } else {
+      console.log('\n✗ Some tests failed');
+    }
+  } catch (err) {
+    console.error('Error:', err.message);
+    console.error(err.stack);
+  } finally {
+    await mongoose.disconnect();
+    if (mongoServer) {
+      await mongoServer.stop();
+    }
+  }
+}
+
+run();
+EOF
+node /tmp/test_index_simple.js 2>&1
+ in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:19:20 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.4s. Got output: node:internal/modules/cjs/loader:1207
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module 'mongodb-memory-server'
+Require stack:
+- /tmp/test_index_simple.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Module.require (node:internal/modules/cjs/loader:1289:19)
+    at require (node:internal/modules/helpers:182:18)
+    at run (/tmp/test_index_simple.js:5:33)
+    at Object.<anonymous> (/tmp/test_index_simple.js:80:1)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/tmp/test_index_simple.js' ]
+}
+
+Node.js v20.20.0
+2026-03-05 22:19:21 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && node /tmp/test_index_simple.js 2>&1 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:19:21 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.5s. Got output: node:internal/modules/cjs/loader:1207
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module 'mongodb-memory-server'
+Require stack:
+- /tmp/test_index_simple.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+    at Module._load (node:internal/modules/cjs/loader:1038:27)
+    at Module.require (node:internal/modules/cjs/loader:1289:19)
+    at require (node:internal/modules/helpers:182:18)
+    at run (/tmp/test_index_simple.js:5:33)
+    at Object.<anonymous> (/tmp/test_index_simple.js:80:1)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/tmp/test_index_simple.js' ]
+}
+
+Node.js v20.20.0
+2026-03-05 22:19:27 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat > /tmp/test_index_simple.js << 'EOF'
+const mongoose = require('/workspace');
+
+async function run() {
+  // Start a local mongodb server first
+  const { MongoMemoryServer } = require('/workspace/node_modules/mongodb-memory-server');
+  let mongoServer;
+  
+  try {
+    console.log('Starting MongoDB Memory Server...');
+    mongoServer = await MongoMemoryServer.create();
+    const mongoUri = mongoServer.getUri();
+    
+    console.log('Connecting to MongoDB...');
+    await mongoose.connect(mongoUri);
+
+    // Test 1: Index with options
+    console.log('\n=== Test 1: Index with background option ===');
+    const schema1 = new mongoose.Schema({ name: String });
+    schema1.index({ name: 1 }, { background: true, name: 'test_background' });
+    
+    const Model1 = mongoose.model('TestModel1', schema1);
+    await Model1.init();
+    
+    const indexes1 = await Model1.collection.getIndexes({ full: true });
+    console.log('Created indexes:', indexes1.map(i => i.name));
+    
+    let foundBackgroundIndex = false;
+    indexes1.forEach(idx => {
+      if (idx.name === 'test_background') {
+        console.log('✓ Found index with correct name');
+        foundBackgroundIndex = true;
+      }
+    });
+    
+    if (!foundBackgroundIndex) {
+      console.log('✗ Background index not found');
+      console.log('Available indexes:', indexes1);
+    }
+
+    // Test 2: Unique index with options
+    console.log('\n=== Test 2: Index with unique option ===');
+    const schema2 = new mongoose.Schema({ email: String });
+    schema2.index({ email: 1 }, { unique: true, name: 'test_unique' });
+    
+    const Model2 = mongoose.model('TestModel2', schema2);
+    await Model2.init();
+    
+    const indexes2 = await Model2.collection.getIndexes({ full: true });
+    console.log('Created indexes:', indexes2.map(i => i.name));
+    
+    let foundUniqueIndex = false;
+    indexes2.forEach(idx => {
+      if (idx.name === 'test_unique' && idx.unique) {
+        console.log('✓ Found unique index with correct name and options');
+        foundUniqueIndex = true;
+      }
+    });
+    
+    if (!foundUniqueIndex) {
+      console.log('✗ Unique index not found');
+      console.log('Available indexes:', indexes2);
+    }
+    
+    if (foundBackgroundIndex && foundUniqueIndex) {
+      console.log('\n✓ All tests passed!');
+    } else {
+      console.log('\n✗ Some tests failed');
+    }
+  } catch (err) {
+    console.error('Error:', err.message);
+    console.error(err.stack);
+  } finally {
+    await mongoose.disconnect();
+    if (mongoServer) {
+      await mongoServer.stop();
+    }
+  }
+}
+
+run();
+EOF
+cd /workspace && node /tmp/test_index_simple.js 2>&1
+ in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:19:28 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 1.3s. Got output: Starting MongoDB Memory Server...
+Connecting to MongoDB...
+
+=== Test 1: Index with background option ===
+Created indexes: [ '_id_', 'test_background' ]
+✓ Found index with correct name
+
+=== Test 2: Index with unique option ===
+Created indexes: [ '_id_', 'test_unique' ]
+✓ Found unique index with correct name and options
+
+✓ All tests passed!
+2026-03-05 22:19:31 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 300 npm test -- test/model.indexes.test.js 2>&1 | tail -100 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:20:30 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 59.0s. Got output: ✔ versioning without version key
+    ✔ version works with strict docs
+    ✔ version works with existing unversioned docs
+    ✔ versionKey is configurable
+    ✔ can be disabled
+    ✔ works with numbericAlpha paths
+    ✔ allows concurrent push
+    ✔ allows concurrent push and pull
+    ✔ throws if you set a positional path after pulling
+    ✔ allows pull/push after $set
+    ✔ should add version to where clause
+    ✔ $set after pull/push throws
+    ✔ doesnt persist conflicting changes
+    ✔ increments version on push
+    ✔ does not increment version when setting nested paths
+    ✔ increments version when modifying mixed array
+    ✔ increments version when $set-ing an array
+    ✔ increments version and converts to $set when mixing $shift and $addToSet
+    ✔ should not increment version for non-versioned fields
+    ✔ should not increment version for non-versioned sub-document fields
+    ✔ should persist correctly when optimisticConcurrency is true gh-10128
+    ✔ throws VersionError when saving with no changes and optimistic concurrency is true (gh-11295)
+    ✔ should support optimisticConcurrency being an array of strings
+    ✔ gh-1898
+    ✔ can remove version key from toObject() (gh-2675)
+    ✔ pull doesnt add version where clause (gh-6190)
+    ✔ copying doc works (gh-5779)
+    ✔ optimistic concurrency (gh-9001) (gh-5424)
+    ✔ adds version to filter if pushing to a nested array (gh-11108)
+    ✔ can store version key in nested property (gh-10980)
+    doc.increment()
+      ✔ works without any other changes (gh-1475)
+
+  VirtualType
+    clone
+      ✔ copies path and options correctly (gh-8587)
+
+
+  3885 passing (56s)
+  46 pending
+  4 failing
+
+  1) model
+       discriminators with unique
+         uses schema-level collation by default (gh-9912):
+     MongoServerError: Error in specification { unique: true, background: true, name: "username_1_collation_[object Object]", key: { username: 1, collation: { locale: "en", strength: 2 } } } :: caused by :: Values in v:2 index key pattern cannot be of type object. Only numbers > 0, numbers < 0, and strings are allowed.
+      at Connection.sendCommand (node_modules/mongodb/lib/cmap/connection.js:299:27)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Connection.command (node_modules/mongodb/lib/cmap/connection.js:327:26)
+      at async Server.command (node_modules/mongodb/lib/sdam/server.js:168:29)
+      at async CreateIndexesOperation.executeCommand (node_modules/mongodb/lib/operations/command.js:76:16)
+      at async CreateIndexesOperation.execute (node_modules/mongodb/lib/operations/indexes.js:122:9)
+      at async tryOperation (node_modules/mongodb/lib/operations/execute_operation.js:207:20)
+      at async executeOperation (node_modules/mongodb/lib/operations/execute_operation.js:75:16)
+      at async Collection.createIndex (node_modules/mongodb/lib/collection.js:329:25)
+
+  2) model
+       discriminators with unique
+         should prevent collation on text indexes (gh-10044):
+     MongoServerError: Error in specification { unique: true, background: true, name: "username_text_collation_[object Object]", key: { username: "text", collation: { locale: "en", strength: 2 } } } :: caused by :: Values in v:2 index key pattern cannot be of type object. Only numbers > 0, numbers < 0, and strings are allowed.
+      at Connection.sendCommand (node_modules/mongodb/lib/cmap/connection.js:299:27)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Connection.command (node_modules/mongodb/lib/cmap/connection.js:327:26)
+      at async Server.command (node_modules/mongodb/lib/sdam/server.js:168:29)
+      at async CreateIndexesOperation.executeCommand (node_modules/mongodb/lib/operations/command.js:76:16)
+      at async CreateIndexesOperation.execute (node_modules/mongodb/lib/operations/indexes.js:122:9)
+      at async tryOperation (node_modules/mongodb/lib/operations/execute_operation.js:207:20)
+      at async executeOperation (node_modules/mongodb/lib/operations/execute_operation.js:75:16)
+      at async Collection.createIndex (node_modules/mongodb/lib/collection.js:329:25)
+
+  3) Model
+       sets index collation based on schema collation (gh-7621):
+     MongoServerError: Error in specification { background: true, name: "name_1_collation_[object Object]", key: { name: 1, collation: { locale: "en" } } } :: caused by :: Values in v:2 index key pattern cannot be of type object. Only numbers > 0, numbers < 0, and strings are allowed.
+      at Connection.sendCommand (node_modules/mongodb/lib/cmap/connection.js:299:27)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Connection.command (node_modules/mongodb/lib/cmap/connection.js:327:26)
+      at async Server.command (node_modules/mongodb/lib/sdam/server.js:168:29)
+      at async CreateIndexesOperation.executeCommand (node_modules/mongodb/lib/operations/command.js:76:16)
+      at async CreateIndexesOperation.execute (node_modules/mongodb/lib/operations/indexes.js:122:9)
+      at async tryOperation (node_modules/mongodb/lib/operations/execute_operation.js:207:20)
+      at async executeOperation (node_modules/mongodb/lib/operations/execute_operation.js:75:16)
+      at async Collection.createIndex (node_modules/mongodb/lib/collection.js:329:25)
+
+  4) Model
+       bug fixes
+         Model.syncIndexes()
+           avoids creating collection if autoCreate: false:
+     MongoServerError: Error in specification { background: true, name: "name_1_collation_[object Object]", key: { name: 1, collation: { locale: "en_US", strength: 2 } } } :: caused by :: Values in v:2 index key pattern cannot be of type object. Only numbers > 0, numbers < 0, and strings are allowed.
+      at Connection.sendCommand (node_modules/mongodb/lib/cmap/connection.js:299:27)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Connection.command (node_modules/mongodb/lib/cmap/connection.js:327:26)
+      at async Server.command (node_modules/mongodb/lib/sdam/server.js:168:29)
+      at async CreateIndexesOperation.executeCommand (node_modules/mongodb/lib/operations/command.js:76:16)
+      at async CreateIndexesOperation.execute (node_modules/mongodb/lib/operations/indexes.js:122:9)
+      at async tryOperation (node_modules/mongodb/lib/operations/execute_operation.js:207:20)
+      at async executeOperation (node_modules/mongodb/lib/operations/execute_operation.js:75:16)
+      at async Collection.createIndex (node_modules/mongodb/lib/collection.js:329:25)
+2026-03-05 22:20:32 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat /workspace/lib/helpers/indexes/applySchemaCollation.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:20:32 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 'use strict';
+
+const isTextIndex = require('./isTextIndex');
+
+module.exports = function applySchemaCollation(indexKeys, indexOptions, schemaOptions) {
+  if (isTextIndex(indexKeys)) {
+    return;
+  }
+
+  if (schemaOptions.hasOwnProperty('collation') && !indexOptions.hasOwnProperty('collation')) {
+    indexOptions.collation = schemaOptions.collation;
+  }
+};
+2026-03-05 22:20:33 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1745,1750p' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:20:34 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: applyWriteConcern(model.schema, indexOptions);
+    applySchemaCollation(indexOptions, indexFields, model.schema.options);
+
+    indexSingleStart(indexFields, options);
+
+    if ('background' in options) {
+2026-03-05 22:20:36 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -i '1746s/applySchemaCollation(indexOptions, indexFields, model.schema.options)/applySchemaCollation(indexFields, indexOptions, model.schema.options)/' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:20:36 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 22:20:38 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1745,1750p' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:20:38 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: applyWriteConcern(model.schema, indexOptions);
+    applySchemaCollation(indexFields, indexOptions, model.schema.options);
+
+    indexSingleStart(indexFields, options);
+
+    if ('background' in options) {
+2026-03-05 22:20:40 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && node /tmp/test_index_simple.js 2>&1 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:20:41 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 1.4s. Got output: Starting MongoDB Memory Server...
+Connecting to MongoDB...
+
+=== Test 1: Index with background option ===
+Created indexes: [ '_id_', 'test_background' ]
+✓ Found index with correct name
+
+=== Test 2: Index with unique option ===
+Created indexes: [ '_id_', 'test_unique' ]
+✓ Found unique index with correct name and options
+
+✓ All tests passed!
+2026-03-05 22:20:43 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 300 npm test -- test/model.indexes.test.js 2>&1 | tail -50 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:21:43 - verifiers.envs.environment.SweJsEnv - WARNING - Command timed out after 60s in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:21:45 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 120 npm test 2>&1 | tail -100 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:22:46 - verifiers.envs.environment.SweJsEnv - WARNING - Command timed out after 60s in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:22:56 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat > /tmp/test_comprehensive.js << 'EOF'
+const mongoose = require('/workspace');
+const { MongoMemoryServer } = require('/workspace/node_modules/mongodb-memory-server');
+
+async function run() {
+  let mongoServer;
+  
+  try {
+    console.log('Starting MongoDB Memory Server...');
+    mongoServer = await MongoMemoryServer.create();
+    const mongoUri = mongoServer.getUri();
+    
+    console.log('Connecting to MongoDB...');
+    await mongoose.connect(mongoUri);
+
+    // Test 1: Index with background option
+    console.log('\n=== Test 1: Index with background option ===');
+    const schema1 = new mongoose.Schema({ name: String });
+    schema1.index({ name: 1 }, { background: true, name: 'test_background' });
+    const Model1 = mongoose.model('TestModel1', schema1);
+    await Model1.init();
+    const indexes1 = await Model1.collection.getIndexes({ full: true });
+    let found = indexes1.find(i => i.name === 'test_background');
+    if (found) {
+      console.log('✓ PASS: Background index created correctly');
+    } else {
+      console.log('✗ FAIL: Background index not found');
+      console.log('  Indexes:', indexes1);
+    }
+
+    // Test 2: Unique index
+    console.log('\n=== Test 2: Index with unique option ===');
+    const schema2 = new mongoose.Schema({ email: String });
+    schema2.index({ email: 1 }, { unique: true, name: 'test_unique' });
+    const Model2 = mongoose.model('TestModel2', schema2);
+    await Model2.init();
+    const indexes2 = await Model2.collection.getIndexes({ full: true });
+    found = indexes2.find(i => i.name === 'test_unique' && i.unique);
+    if (found) {
+      console.log('✓ PASS: Unique index created correctly');
+    } else {
+      console.log('✗ FAIL: Unique index not found');
+      console.log('  Indexes:', indexes2);
+    }
+
+    // Test 3: Compound index with options
+    console.log('\n=== Test 3: Compound index with sparse option ===');
+    const schema3 = new mongoose.Schema({ 
+      first: String,
+      second: String
+    });
+    schema3.index({ first: 1, second: 1 }, { sparse: true, name: 'compound_sparse' });
+    const Model3 = mongoose.model('TestModel3', schema3);
+    await Model3.init();
+    const indexes3 = await Model3.collection.getIndexes({ full: true });
+    found = indexes3.find(i => i.name === 'compound_sparse' && i.sparse);
+    if (found) {
+      console.log('✓ PASS: Compound sparse index created correctly');
+    } else {
+      console.log('✗ FAIL: Compound sparse index not found');
+      console.log('  Indexes:', indexes3);
+    }
+
+    // Test 4: Index with collation
+    console.log('\n=== Test 4: Index with collation option ===');
+    const schema4 = new mongoose.Schema({ title: String });
+    schema4.index({ title: 1 }, { collation: { locale: 'en' }, name: 'title_collated' });
+    const Model4 = mongoose.model('TestModel4', schema4);
+    await Model4.init();
+    const indexes4 = await Model4.collection.getIndexes({ full: true });
+    found = indexes4.find(i => i.name === 'title_collated');
+    if (found && found.collation && found.collation.locale === 'en') {
+      console.log('✓ PASS: Index with collation created correctly');
+    } else {
+      console.log('✗ FAIL: Index with collation not found or incorrect');
+      console.log('  Indexes:', indexes4);
+    }
+
+    // Test 5: Index declared via schema property
+    console.log('\n=== Test 5: Index via schema property ===');
+    const schema5 = new mongoose.Schema({
+      username: { type: String, index: true, unique: true }
+    });
+    const Model5 = mongoose.model('TestModel5', schema5);
+    await Model5.init();
+    const indexes5 = await Model5.collection.getIndexes({ full: true });
+    found = indexes5.find(i => i.name === 'username_1' && i.unique);
+    if (found) {
+      console.log('✓ PASS: Schema property index created correctly');
+    } else {
+      console.log('✗ FAIL: Schema property index not found');
+      console.log('  Indexes:', indexes5);
+    }
+
+    // Test 6: Multiple indexes with various options
+    console.log('\n=== Test 6: Multiple indexes ===');
+    const schema6 = new mongoose.Schema({
+      field1: String,
+      field2: String,
+      field3: String
+    });
+    schema6.index({ field1: 1 }, { name: 'idx1' });
+    schema6.index({ field2: 1 }, { name: 'idx2', sparse: true });
+    schema6.index({ field1: 1, field3: 1 }, { name: 'idx3', unique: true });
+    const Model6 = mongoose.model('TestModel6', schema6);
+    await Model6.init();
+    const indexes6 = await Model6.collection.getIndexes({ full: true });
+    const idx1 = indexes6.find(i => i.name === 'idx1');
+    const idx2 = indexes6.find(i => i.name === 'idx2' && i.sparse);
+    const idx3 = indexes6.find(i => i.name === 'idx3' && i.unique);
+    if (idx1 && idx2 && idx3) {
+      console.log('✓ PASS: Multiple indexes created correctly');
+    } else {
+      console.log('✗ FAIL: Not all indexes found');
+      console.log('  idx1:', idx1);
+      console.log('  idx2:', idx2);
+      console.log('  idx3:', idx3);
+      console.log('  All indexes:', indexes6);
+    }
+
+    console.log('\n=== All tests completed ===');
+  } catch (err) {
+    console.error('Error:', err.message);
+    console.error(err.stack);
+  } finally {
+    await mongoose.disconnect();
+    if (mongoServer) {
+      await mongoServer.stop();
+    }
+  }
+}
+
+run();
+EOF
+cd /workspace && node /tmp/test_comprehensive.js 2>&1
+ in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:22:57 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 1.7s. Got output: Starting MongoDB Memory Server...
+Connecting to MongoDB...
+
+=== Test 1: Index with background option ===
+✓ PASS: Background index created correctly
+
+=== Test 2: Index with unique option ===
+✓ PASS: Unique index created correctly
+
+=== Test 3: Compound index with sparse option ===
+✓ PASS: Compound sparse index created correctly
+
+=== Test 4: Index with collation option ===
+✓ PASS: Index with collation created correctly
+
+=== Test 5: Index via schema property ===
+✓ PASS: Schema property index created correctly
+
+=== Test 6: Multiple indexes ===
+✓ PASS: Multiple indexes created correctly
+
+=== All tests completed ===
+2026-03-05 22:22:59 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "model.collection.createIndex\|applySchemaCollation" /workspace/lib/model.js | grep -A 1 -B 1 "1" in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:22:59 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 30:const applySchemaCollation = require('./helpers/indexes/applySchemaCollation');
+1512:      applySchemaCollation(schemaIndexKeysObject, options, schema.options);
+1746:    applySchemaCollation(indexFields, indexOptions, model.schema.options);
+1757:      promise = model.collection.createIndex(indexFields, indexOptions);
+2026-03-05 22:23:02 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1505,1520p' /workspace/lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:23:02 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: // Timeseries collections have a default index on { timeField: 1, metaField: 1 }.
+    if (isTimeseriesIndex(dbIndex, schema.options)) {
+      continue;
+    }
+
+    for (const [schemaIndexKeysObject, schemaIndexOptions] of schemaIndexes) {
+      const options = decorateDiscriminatorIndexOptions(schema, clone(schemaIndexOptions));
+      applySchemaCollation(schemaIndexKeysObject, options, schema.options);
+
+      if (isIndexEqual(schemaIndexKeysObject, options, dbIndex)) {
+        found = true;
+        break;
+      }
+    }
+
+    if (found) {
+2026-03-05 22:23:04 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && git diff lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:23:04 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: diff --git a/lib/model.js b/lib/model.js
+index 67cdb22..ab7a10a 100644
+--- a/lib/model.js
++++ b/lib/model.js
+@@ -1743,7 +1743,7 @@ function _ensureIndexes(model, options, callback) {
+     delete indexOptions._autoIndex;
+     decorateDiscriminatorIndexOptions(model.schema, indexOptions);
+     applyWriteConcern(model.schema, indexOptions);
+-    applySchemaCollation(indexOptions, indexFields, model.schema.options);
++    applySchemaCollation(indexFields, indexOptions, model.schema.options);
+ 
+     indexSingleStart(indexFields, options);
+ 
+@@ -1754,7 +1754,7 @@ function _ensureIndexes(model, options, callback) {
+     // Just in case `createIndex()` throws a sync error
+     let promise = null;
+     try {
+-      promise = model.collection.createIndex(indexOptions, indexFields);
++      promise = model.collection.createIndex(indexFields, indexOptions);
+     } catch (err) {
+       if (!indexError) {
+         indexError = err;
+2026-03-05 22:23:08 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat > /tmp/test_original_bug.js << 'EOF'
+const mongoose = require('/workspace');
+const { MongoMemoryServer } = require('/workspace/node_modules/mongodb-memory-server');
+
+async function run() {
+  let mongoServer;
+  
+  try {
+    console.log('Reproducing original bug report...\n');
+    mongoServer = await MongoMemoryServer.create();
+    const mongoUri = mongoServer.getUri();
+    
+    await mongoose.connect(mongoUri);
+
+    const schema = new mongoose.Schema({ name: String });
+    // trying to create an index with options
+    schema.index({ name: 1 }, { background: true, name: 'background_true' });
+
+    const Model = mongoose.model('Person', schema);
+
+    try {
+      await Model.init();
+      console.log('✓ SUCCESS: index created');
+      console.log('✓ BUG IS FIXED!');
+    } catch (err) {
+      console.error('✗ FAILED: index creation failed');
+      console.error('Error:', err.message);
+      process.exit(1);
+    }
+
+    await mongoose.disconnect();
+  } finally {
+    if (mongoServer) {
+      await mongoServer.stop();
+    }
+  }
+}
+
+run();
+EOF
+cd /workspace && node /tmp/test_original_bug.js 2>&1
+ in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:23:09 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 1.4s. Got output: Reproducing original bug report...
+
+✓ SUCCESS: index created
+✓ BUG IS FIXED!
+2026-03-05 22:23:12 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 60 npm test -- test/model.indexes.test.js --grep "are created when model is compiled" 2>&1 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:23:15 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.5s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js test/model.indexes.test.js --grep are created when model is compiled
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  model
+    indexes
+      ✔ are created when model is compiled
+
+
+  1 passing (174ms)
+2026-03-05 22:23:16 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 60 npm test -- test/model.indexes.test.js --grep "of embedded documents" 2>&1 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:23:19 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.6s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js test/model.indexes.test.js --grep of embedded documents
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  model
+    indexes
+      ✔ of embedded documents
+      ✔ of embedded documents unless excludeIndexes (gh-5575) (gh-8343)
+
+
+  2 passing (247ms)
+2026-03-05 22:23:20 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 60 npm test -- test/schema.test.js --grep "index" 2>&1 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:23:25 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 4.3s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js test/schema.test.js --grep index
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  connections:
+    Connection#syncIndexes() (gh-10893) (gh-11039)
+      ✔ does not sync indexes automatically when `autoIndex: true` (gh-11039)
+      ✔ when `continueOnError: true` it will continue to sync indexes even if one model fails (66ms)
+
+  document
+    ✔ reports array cast error with index (gh-8888)
+    bug fixes
+      ✔ single embedded schemas with indexes (gh-3594)
+      ✔ validation works when setting array index (gh-3816) (39ms)
+      ✔ validateSync works when setting array index nested (gh-5389)
+
+  geojson
+    ✔ index
+
+  mongoose module:
+    exports
+      ✔ Allows for the removal of indexes via string or object (gh-11547)
+
+  model
+    discriminator()
+      root schema inheritance
+        ✔ does not inherit indexes
+
+  model
+    ✔ skips automatic indexing on childSchema if autoIndex: false (gh-9150)
+    indexes
+      ✔ are created when model is compiled
+      ✔ of embedded documents
+      ✔ of embedded documents unless excludeIndexes (gh-5575) (gh-8343)
+      ✔ of multiple embedded documents with same schema
+      ✔ compound: on embedded docs
+      ✔ nested embedded docs (gh-5199)
+      ✔ primitive arrays (gh-3347)
+      ✔ error should emit on the model
+      ✔ when one index creation errors
+      ✔ creates descending indexes from schema definition(gh-8895)
+      auto creation
+        ✔ can be disabled (109ms)
+        global autoIndexes (gh-1875)
+          ✔ will create indexes as a default
+          ✔ will not create indexes if the global auto index is false and schema option isnt set (gh-1875) (122ms)
+      model.ensureIndexes()
+        ✔ is a function
+        ✔ returns a Promise
+        ✔ creates indexes
+    discriminators with unique
+      ✔ converts to partial unique index (gh-6347) (39ms)
+      ✔ decorated discriminator index with syncIndexes (gh-6347)
+      ✔ should not re-create a compound text index that involves non-text indexes, using syncIndexes (gh-13136)
+      ✔ should not find a diff when calling diffIndexes after syncIndexes involving a text and non-text compound index (gh-13136)
+      ✔ should prevent collation on text indexes (gh-10044)
+
+  model: querying:
+    find
+      text search indexes
+        ✔ works with text search ensure indexes 
+        ✔ works when text search is called by a schema (gh-3824) (gh-6851)
+    2dsphere
+      ✔ index is allowed in schema
+    hashed indexes
+      ✔ work
+
+  Model
+    ✔ sets index collation based on schema collation (gh-7621)
+    Skip setting default value for Geospatial-indexed fields (gh-1668)
+      ✔ 2dsphere indexed field with value is saved
+      ✔ 2dsphere indexed field without value is saved (gh-1668)
+      ✔ 2dsphere indexed field in subdoc without value is saved
+      ✔ 2dsphere indexed field with geojson without value is saved (gh-3233)
+      ✔ Doc with 2dsphere indexed field without initial value can be updated
+      ✔ 2dsphere indexed required field without value is rejected
+      ✔ 2dsphere field without value but with schema default is saved
+      ✔ 2d indexed field without value is saved
+      - Compound index with 2dsphere field without value is saved
+      - Compound index on field earlier declared with 2dsphere index is saved
+    bug fixes
+      Model.syncIndexes()
+        ✔ adds indexes to the collection
+        ✔ drops indexes that are not present in schema
+        ✔ when called with different key order, it treats different order as different indexes (gh-8135)
+        ✔ syncIndexes(...) compound index including `_id` (gh-8559)
+        ✔ syncIndexes() does not call createIndex for indexes that already exist
+        ✔ should not drop a text index on .syncIndexes() call (gh-10850)
+        ✔ adding discriminators should not drop the parent model's indexes
+        ✔ syncing one discriminator's indexes should not drop the main model's indexes
+        ✔ syncing main model does not sync discrimator indexes
+        ✔ syncing discriminator does not attempt to sync parent model's indexes
+        ✔ creates indexes only when they do not exist on the mongodb server (gh-12250)
+
+  QueryCursor
+    ✔ passes document index as the second argument for query cursor (gh-8972)
+    ✔ passes document index as the second argument for aggregation cursor (gh-8972)
+
+  schema alias option
+    ✔ supports passing the alias name for an index (gh-13276)
+
+  schema
+    ✔ copies indexes when calling add() with schema instance (gh-12654)
+    ✔ throws "already has an index" error if duplicate index definition (gh-15056)
+    indexes
+      definition
+        ✔ basic
+        ✔ compound
+        ✔ compound based on name (gh-6499)
+        ✔ using "ascending" and "descending" for order (gh-13725)
+        ✔ with single nested doc (gh-6113)
+        ✔ with embedded discriminator (gh-6485)
+
+  schematype
+    ✔ properly handles specifying index in combination with unique or sparse
+    ✔ handles index: false with unique, sparse, text set to false (gh-7620)
+    ✔ handles unique, sparse, text set to false with no index property (gh-10738)
+    clone()
+      ✔ clones added index
+      ✔ clones added sparse (index option)
+      ✔ clones added text (index option)
+      ✔ clones added unique (index option)
+
+  getRelatedIndexes
+    getRelatedSchemaIndexes
+      ✔ with base model, no discriminator, it gets all indexes
+      ✔ with base model that has discriminator, it ignores discriminator indexes
+      ✔ with base model that has discriminator, it includes discriminator indexes that only checks for existence
+      ✔ with discriminator model, it only gets discriminator indexes
+    getRelatedDBIndexes
+      ✔ with base model, no discriminator, it gets all indexes
+      ✔ with base model that has discriminator, it ignores discriminator indexes
+      ✔ with discriminator model, it only gets discriminator indexes
+
+  isIndexEqual
+    ✔ works when MongoDB index has collation but Mongoose index doesn't (gh-9224)
+    ✔ handles text indexes (gh-9225)
+
+  isIndexSpecEqual
+    ✔ should return true for equal index specifications
+    ✔ should return false for different index keys
+
+  timestamps
+    schema options
+      ✔ TTL index with timestamps (gh-5656)
+
+  types array
+    indexOf()
+      ✔ works
+
+  types.documentarray
+    push()
+      ✔ corrects #ownerDocument() and index if value was created with array.create() (gh-1385)
+      ✔ reports validation errors with correct index path (gh-7724)
+
+  utils
+    toCollectionName
+      ✔ returns the same name for system.indexes
+
+
+  89 passing (2s)
+  2 pending
+2026-03-05 22:23:27 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 120 npm test -- test/model.indexes.test.js 2>&1 | grep -E "passing|failing|pending" | tail -5 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:27 - verifiers.envs.environment.SweJsEnv - WARNING - Command timed out after 60s in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:29 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 90 npm test -- test/model.indexes.test.js --grep "createIndexes" 2>&1 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:32 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.8s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js test/model.indexes.test.js --grep createIndexes
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  0 passing (5ms)
+2026-03-05 22:24:35 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 90 npm test -- test/model.indexes.test.js --grep "indexes" 2>&1 | tail -30 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:39 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 3.5s. Got output: indexes
+      definition
+        ✔ basic
+        ✔ compound
+        ✔ compound based on name (gh-6499)
+        ✔ using "ascending" and "descending" for order (gh-13725)
+        ✔ with single nested doc (gh-6113)
+        ✔ with embedded discriminator (gh-6485)
+
+  getRelatedIndexes
+    getRelatedSchemaIndexes
+      ✔ with base model, no discriminator, it gets all indexes
+      ✔ with base model that has discriminator, it ignores discriminator indexes
+      ✔ with base model that has discriminator, it includes discriminator indexes that only checks for existence
+      ✔ with discriminator model, it only gets discriminator indexes
+    getRelatedDBIndexes
+      ✔ with base model, no discriminator, it gets all indexes
+      ✔ with base model that has discriminator, it ignores discriminator indexes
+      ✔ with discriminator model, it only gets discriminator indexes
+
+  isIndexEqual
+    ✔ handles text indexes (gh-9225)
+
+  utils
+    toCollectionName
+      ✔ returns the same name for system.indexes
+
+
+  51 passing (1s)
+2026-03-05 22:24:41 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && git diff lib/model.js in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:41 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: diff --git a/lib/model.js b/lib/model.js
+index 67cdb22..ab7a10a 100644
+--- a/lib/model.js
++++ b/lib/model.js
+@@ -1743,7 +1743,7 @@ function _ensureIndexes(model, options, callback) {
+     delete indexOptions._autoIndex;
+     decorateDiscriminatorIndexOptions(model.schema, indexOptions);
+     applyWriteConcern(model.schema, indexOptions);
+-    applySchemaCollation(indexOptions, indexFields, model.schema.options);
++    applySchemaCollation(indexFields, indexOptions, model.schema.options);
+ 
+     indexSingleStart(indexFields, options);
+ 
+@@ -1754,7 +1754,7 @@ function _ensureIndexes(model, options, callback) {
+     // Just in case `createIndex()` throws a sync error
+     let promise = null;
+     try {
+-      promise = model.collection.createIndex(indexOptions, indexFields);
++      promise = model.collection.createIndex(indexFields, indexOptions);
+     } catch (err) {
+       if (!indexError) {
+         indexError = err;
+2026-03-05 22:24:47 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && git diff lib/model.js | head -30 in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:47 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.2s. Got output: diff --git a/lib/model.js b/lib/model.js
+index 67cdb22..ab7a10a 100644
+--- a/lib/model.js
++++ b/lib/model.js
+@@ -1743,7 +1743,7 @@ function _ensureIndexes(model, options, callback) {
+     delete indexOptions._autoIndex;
+     decorateDiscriminatorIndexOptions(model.schema, indexOptions);
+     applyWriteConcern(model.schema, indexOptions);
+-    applySchemaCollation(indexOptions, indexFields, model.schema.options);
++    applySchemaCollation(indexFields, indexOptions, model.schema.options);
+ 
+     indexSingleStart(indexFields, options);
+ 
+@@ -1754,7 +1754,7 @@ function _ensureIndexes(model, options, callback) {
+     // Just in case `createIndex()` throws a sync error
+     let promise = null;
+     try {
+-      promise = model.collection.createIndex(indexOptions, indexFields);
++      promise = model.collection.createIndex(indexFields, indexOptions);
+     } catch (err) {
+       if (!indexError) {
+         indexError = err;
+2026-03-05 22:24:50 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep 'sort by text score (gh-5258)' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:52 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.3s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep sort by text score (gh-5258)
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  0 passing (5ms)
+2026-03-05 22:24:52 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep 'adds hint option' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:54 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.3s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep adds hint option
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  aggregate: 
+    Mongo 3.6 options
+      ✔ adds hint option
+
+
+  1 passing (226ms)
+2026-03-05 22:24:54 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep 'autoCreate when collection already exists does not fail (gh-7122)' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:57 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.3s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep autoCreate when collection already exists does not fail (gh-7122)
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  0 passing (5ms)
+2026-03-05 22:24:57 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep 're-runs init() if connecting after disconnecting (gh-12047)' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:24:59 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.3s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep re-runs init() if connecting after disconnecting (gh-12047)
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  0 passing (8ms)
+2026-03-05 22:24:59 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep 're-runs init() if running setClient() after disconnecting (gh-12047)' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:25:01 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.5s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep re-runs init() if running setClient() after disconnecting (gh-12047)
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  0 passing (9ms)
+2026-03-05 22:25:01 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep 'Allows a syncIndexes option with connection mongoose.connection.syncIndexes (gh-10893)' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:25:04 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.4s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep Allows a syncIndexes option with connection mongoose.connection.syncIndexes (gh-10893)
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  0 passing (5ms)
+2026-03-05 22:25:04 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep 'stops as soon as one model fails with `continueOnError: false` (gh-11039)' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:25:06 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.5s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep stops as soon as one model fails with `continueOnError: false` (gh-11039)
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  0 passing (9ms)
+2026-03-05 22:25:06 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep 'error includes a property with all the errors when `continueOnError: false`' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:25:09 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.4s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep error includes a property with all the errors when `continueOnError: false`
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  connections:
+    Connection#syncIndexes() (gh-10893) (gh-11039)
+      ✔ error includes a property with all the errors when `continueOnError: false` (43ms)
+
+
+  1 passing (211ms)
+2026-03-05 22:25:09 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep '`continueOnError` is false by default' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:25:11 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.6s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep `continueOnError` is false by default
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  connections:
+    Connection#syncIndexes() (gh-10893) (gh-11039)
+      ✔ `continueOnError` is false by default (49ms)
+
+
+  1 passing (210ms)
+2026-03-05 22:25:11 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test -- --grep 'when `continueOnError: true` it will continue to sync indexes even if one model fails' 2>&1 || true in sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:25:14 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.6s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js --grep when `continueOnError: true` it will continue to sync indexes even if one model fails
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  connections:
+    Connection#syncIndexes() (gh-10893) (gh-11039)
+      ✔ when `continueOnError: true` it will continue to sync indexes even if one model fails (75ms)
+
+
+  1 passing (263ms)
+2026-03-05 22:25:14 - verifiers.envs.environment.SweJsEnv - DEBUG - Deleted sandbox jjc7cyqix8ynns7jxw7yol96
+2026-03-05 22:25:14 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Received signal SIGTERM, initiating graceful shutdown
+2026-03-05 22:25:15 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Stop event received, shutting down gracefully
+2026-03-05 22:25:15 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Environment server shut down

@@ -1,0 +1,9 @@
+2026-03-05 21:14:28 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Initializing ZMQEnvServer to serve alphabet-sort (env_args={}, extra_env_kwargs={})
+2026-03-05 21:14:28 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Loading environment alphabet-sort with env_args={}
+2026-03-05 21:14:28 - verifiers.utils.env_utils - INFO - Loading environment: alphabet-sort
+2026-03-05 21:14:28 - verifiers.utils.env_utils - INFO - Using default args: dataset_split='train', min_names_per_turn=1, min_turns=1, max_turns=3, similarity_power=4, seed=1337420, dataset_name='kalomaze/alphabetic-arxiv-authors-it1', power_per_turn=True, max_names_per_turn=5
+2026-03-05 21:14:30 - verifiers.utils.env_utils - INFO - Successfully loaded environment 'alphabet-sort'
+2026-03-05 21:14:30 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - ZMQEnvServer started on tcp://127.0.0.1:55066
+2026-03-05 21:14:35 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Received signal SIGTERM, initiating graceful shutdown
+2026-03-05 21:14:35 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Stop event received, shutting down gracefully
+2026-03-05 21:14:35 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Environment server shut down

@@ -1,0 +1,10 @@
+2026-03-05 22:55:48 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Initializing ZMQEnvServer to serve swe-js (env_args={}, extra_env_kwargs={})
+2026-03-05 22:55:48 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Loading environment swe-js with env_args={}
+2026-03-05 22:55:48 - verifiers.utils.env_utils - INFO - Loading environment: swe-js
+2026-03-05 22:55:48 - verifiers.utils.env_utils - INFO - Using default args: timeout_per_command=60, num_examples=-1, max_turns=100, test_timeout=300
+2026-03-05 22:55:53 - verifiers.utils.env_utils - INFO - Successfully loaded environment 'swe-js'
+2026-03-05 22:55:53 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - ZMQEnvServer started on tcp://127.0.0.1:57282
+2026-03-05 23:00:51 - verifiers.envs.environment.SweJsEnv - WARNING - Command timed out after 60s in sandbox ec2px81nakbx81b09rcenvvt
+2026-03-05 23:03:44 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Received signal SIGTERM, initiating graceful shutdown
+2026-03-05 23:03:44 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Stop event received, shutting down gracefully
+2026-03-05 23:03:44 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Environment server shut down

@@ -1,0 +1,9 @@
+2026-03-05 21:18:08 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Initializing ZMQEnvServer to serve test-math (env_args={}, extra_env_kwargs={})
+2026-03-05 21:18:08 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Loading environment test-math with env_args={}
+2026-03-05 21:18:08 - verifiers.utils.env_utils - INFO - Loading environment: test-math
+2026-03-05 21:18:08 - verifiers.utils.env_utils - INFO - Using default args: seed=42, max_number=100, num_examples=50
+2026-03-05 21:18:08 - verifiers.utils.env_utils - INFO - Successfully loaded environment 'test-math'
+2026-03-05 21:18:08 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - ZMQEnvServer started on tcp://127.0.0.1:55208
+2026-03-05 21:18:11 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Received signal SIGTERM, initiating graceful shutdown
+2026-03-05 21:18:11 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Stop event received, shutting down gracefully
+2026-03-05 21:18:11 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Environment server shut down

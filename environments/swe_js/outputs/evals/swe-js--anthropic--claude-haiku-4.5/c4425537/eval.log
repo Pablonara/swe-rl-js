@@ -1,0 +1,1137 @@
+2026-03-05 21:57:45 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Initializing ZMQEnvServer to serve swe-js (env_args={}, extra_env_kwargs={})
+2026-03-05 21:57:45 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Loading environment swe-js with env_args={}
+2026-03-05 21:57:45 - verifiers.utils.env_utils - INFO - Loading environment: swe-js
+2026-03-05 21:57:45 - verifiers.utils.env_utils - DEBUG - Environment defaults: num_examples=-1, max_turns=30, timeout_per_command=60, test_timeout=300, kwargs=<required>
+2026-03-05 21:57:45 - verifiers.utils.env_utils - INFO - Using default args: max_turns=30, timeout_per_command=60, test_timeout=300, num_examples=-1
+2026-03-05 21:57:52 - verifiers.rubrics.rubric.RubricGroup - DEBUG - Initialized RubricGroup with 2 rubrics
+2026-03-05 21:57:52 - verifiers.utils.env_utils - INFO - Successfully loaded environment 'swe-js'
+2026-03-05 21:57:52 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - ZMQEnvServer started on tcp://127.0.0.1:55890
+2026-03-05 21:57:53 - verifiers.envs.environment.SweJsEnv - DEBUG - Created sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:57:53 - verifiers.envs.environment.SweJsEnv - DEBUG - Waiting for sandbox kn69ilpk87nnm6i279jzgz3l to be ready
+2026-03-05 21:58:02 - verifiers.envs.environment.SweJsEnv - DEBUG - Waited 9.7s for sandbox to be ready
+2026-03-05 21:58:02 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command apt-get update && apt-get install -y git in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:58:14 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 12.0s. Got output: Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+Fetched 9346 kB in 1s (6503 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ca-certificates git-man krb5-locales less libbrotli1 libbsd0 libcbor0.8
+  libcurl3-gnutls libedit2 liberror-perl libexpat1 libfido2-1 libgdbm-compat4
+  libgdbm6 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3
+  libkrb5support0 libldap-2.5-0 libldap-common libnghttp2-14 libperl5.36
+  libpsl5 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1
+  libssl3 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1
+  netbase openssh-client openssl patch perl perl-modules-5.36 publicsuffix
+  xauth
+Suggested packages:
+  gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui
+  gitk gitweb git-cvs git-mediawiki git-svn gdbm-l10n krb5-doc krb5-user
+  sensible-utils libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql keychain
+  libpam-ssh monkeysphere ssh-askpass ed diffutils-doc perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make
+  libtap-harness-archive-perl
+The following NEW packages will be installed:
+  ca-certificates git git-man krb5-locales less libbrotli1 libbsd0 libcbor0.8
+  libcurl3-gnutls libedit2 liberror-perl libexpat1 libfido2-1 libgdbm-compat4
+  libgdbm6 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3
+  libkrb5support0 libldap-2.5-0 libldap-common libnghttp2-14 libperl5.36
+  libpsl5 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1
+  libssl3 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1
+  netbase openssh-client openssl patch perl perl-modules-5.36 publicsuffix
+  xauth
+0 upgraded, 46 newly installed, 0 to remove and 0 not upgraded.
+Need to get 25.5 MB of archives.
+After this operation, 124 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 perl-modules-5.36 all 5.36.0-7+deb12u3 [2815 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 libgdbm6 amd64 1.23-3 [72.2 kB]
+Get:3 http://deb.debian.org/debian bookworm/main amd64 libgdbm-compat4 amd64 1.23-3 [48.2 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 libperl5.36 amd64 5.36.0-7+deb12u3 [4196 kB]
+Get:5 http://deb.debian.org/debian bookworm/main amd64 perl amd64 5.36.0-7+deb12u3 [239 kB]
+Get:6 http://deb.debian.org/debian bookworm/main amd64 less amd64 590-2.1~deb12u2 [132 kB]
+Get:7 http://deb.debian.org/debian bookworm/main amd64 netbase all 6.4 [12.8 kB]
+Get:8 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl3 amd64 3.0.18-1~deb12u2 [2030 kB]
+Get:9 http://deb.debian.org/debian-security bookworm-security/main amd64 openssl amd64 3.0.18-1~deb12u2 [1433 kB]
+Get:10 http://deb.debian.org/debian bookworm/main amd64 ca-certificates all 20230311+deb12u1 [155 kB]
+Get:11 http://deb.debian.org/debian bookworm/main amd64 krb5-locales all 1.20.1-2+deb12u4 [63.4 kB]
+Get:12 http://deb.debian.org/debian bookworm/main amd64 libbsd0 amd64 0.11.7-2 [117 kB]
+Get:13 http://deb.debian.org/debian bookworm/main amd64 libedit2 amd64 3.1-20221030-2 [93.0 kB]
+Get:14 http://deb.debian.org/debian bookworm/main amd64 libcbor0.8 amd64 0.8.0-2+b1 [27.4 kB]
+Get:15 http://deb.debian.org/debian bookworm/main amd64 libfido2-1 amd64 1.12.0-2+b1 [77.2 kB]
+Get:16 http://deb.debian.org/debian bookworm/main amd64 libkrb5support0 amd64 1.20.1-2+deb12u4 [33.2 kB]
+Get:17 http://deb.debian.org/debian bookworm/main amd64 libk5crypto3 amd64 1.20.1-2+deb12u4 [79.8 kB]
+Get:18 http://deb.debian.org/debian bookworm/main amd64 libkeyutils1 amd64 1.6.3-2 [8808 B]
+Get:19 http://deb.debian.org/debian bookworm/main amd64 libkrb5-3 amd64 1.20.1-2+deb12u4 [334 kB]
+Get:20 http://deb.debian.org/debian bookworm/main amd64 libgssapi-krb5-2 amd64 1.20.1-2+deb12u4 [135 kB]
+Get:21 http://deb.debian.org/debian bookworm/main amd64 openssh-client amd64 1:9.2p1-2+deb12u7 [992 kB]
+Get:22 http://deb.debian.org/debian bookworm/main amd64 libbrotli1 amd64 1.0.9-2+b6 [275 kB]
+Get:23 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg-10 [20.3 kB]
+Get:24 http://deb.debian.org/debian bookworm/main amd64 libsasl2-2 amd64 2.1.28+dfsg-10 [59.7 kB]
+Get:25 http://deb.debian.org/debian bookworm/main amd64 libldap-2.5-0 amd64 2.5.13+dfsg-5 [183 kB]
+Get:26 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u2 [73.0 kB]
+Get:27 http://deb.debian.org/debian bookworm/main amd64 libpsl5 amd64 0.21.2-1 [58.7 kB]
+Get:28 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+Get:29 http://deb.debian.org/debian bookworm/main amd64 libssh2-1 amd64 1.10.0-3+b1 [179 kB]
+Get:30 http://deb.debian.org/debian bookworm/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u14 [386 kB]
+Get:31 http://deb.debian.org/debian bookworm/main amd64 libexpat1 amd64 2.5.0-1+deb12u2 [99.9 kB]
+Get:32 http://deb.debian.org/debian bookworm/main amd64 liberror-perl all 0.17029-2 [29.0 kB]
+Get:33 http://deb.debian.org/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u3 [2053 kB]
+Get:34 http://deb.debian.org/debian bookworm/main amd64 git amd64 1:2.39.5-0+deb12u3 [7264 kB]
+Get:35 http://deb.debian.org/debian bookworm/main amd64 libldap-common all 2.5.13+dfsg-5 [29.3 kB]
+Get:36 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules amd64 2.1.28+dfsg-10 [66.6 kB]
+Get:37 http://deb.debian.org/debian bookworm/main amd64 libxau6 amd64 1:1.0.9-1 [19.7 kB]
+Get:38 http://deb.debian.org/debian bookworm/main amd64 libxdmcp6 amd64 1:1.1.2-3 [26.3 kB]
+Get:39 http://deb.debian.org/debian bookworm/main amd64 libxcb1 amd64 1.15-1 [144 kB]
+Get:40 http://deb.debian.org/debian bookworm/main amd64 libx11-data all 2:1.8.4-2+deb12u2 [292 kB]
+Get:41 http://deb.debian.org/debian bookworm/main amd64 libx11-6 amd64 2:1.8.4-2+deb12u2 [760 kB]
+Get:42 http://deb.debian.org/debian bookworm/main amd64 libxext6 amd64 2:1.3.4-1+b1 [52.9 kB]
+Get:43 http://deb.debian.org/debian bookworm/main amd64 libxmuu1 amd64 2:1.1.3-3 [23.9 kB]
+Get:44 http://deb.debian.org/debian bookworm/main amd64 patch amd64 2.7.6-7 [128 kB]
+Get:45 http://deb.debian.org/debian bookworm/main amd64 publicsuffix all 20230209.2326-1 [126 kB]
+Get:46 http://deb.debian.org/debian bookworm/main amd64 xauth amd64 1:1.1.2-1 [36.0 kB]
+Fetched 25.5 MB in 0s (65.5 MB/s)
+Selecting previously unselected package perl-modules-5.36.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6096 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.36_5.36.0-7+deb12u3_all.deb ...
+Unpacking perl-modules-5.36 (5.36.0-7+deb12u3) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../01-libgdbm6_1.23-3_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-3) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.23-3_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-3) ...
+Selecting previously unselected package libperl5.36:amd64.
+Preparing to unpack .../03-libperl5.36_5.36.0-7+deb12u3_amd64.deb ...
+Unpacking libperl5.36:amd64 (5.36.0-7+deb12u3) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.36.0-7+deb12u3_amd64.deb ...
+Unpacking perl (5.36.0-7+deb12u3) ...
+Selecting previously unselected package less.
+Preparing to unpack .../05-less_590-2.1~deb12u2_amd64.deb ...
+Unpacking less (590-2.1~deb12u2) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../06-netbase_6.4_all.deb ...
+Unpacking netbase (6.4) ...
+Selecting previously unselected package libssl3:amd64.
+Preparing to unpack .../07-libssl3_3.0.18-1~deb12u2_amd64.deb ...
+Unpacking libssl3:amd64 (3.0.18-1~deb12u2) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../08-openssl_3.0.18-1~deb12u2_amd64.deb ...
+Unpacking openssl (3.0.18-1~deb12u2) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../09-ca-certificates_20230311+deb12u1_all.deb ...
+Unpacking ca-certificates (20230311+deb12u1) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../10-krb5-locales_1.20.1-2+deb12u4_all.deb ...
+Unpacking krb5-locales (1.20.1-2+deb12u4) ...
+Selecting previously unselected package libbsd0:amd64.
+Preparing to unpack .../11-libbsd0_0.11.7-2_amd64.deb ...
+Unpacking libbsd0:amd64 (0.11.7-2) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../12-libedit2_3.1-20221030-2_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20221030-2) ...
+Selecting previously unselected package libcbor0.8:amd64.
+Preparing to unpack .../13-libcbor0.8_0.8.0-2+b1_amd64.deb ...
+Unpacking libcbor0.8:amd64 (0.8.0-2+b1) ...
+Selecting previously unselected package libfido2-1:amd64.
+Preparing to unpack .../14-libfido2-1_1.12.0-2+b1_amd64.deb ...
+Unpacking libfido2-1:amd64 (1.12.0-2+b1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../15-libkrb5support0_1.20.1-2+deb12u4_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-2+deb12u4) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../16-libk5crypto3_1.20.1-2+deb12u4_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-2+deb12u4) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../17-libkeyutils1_1.6.3-2_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../18-libkrb5-3_1.20.1-2+deb12u4_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-2+deb12u4) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../19-libgssapi-krb5-2_1.20.1-2+deb12u4_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-2+deb12u4) ...
+Selecting previously unselected package openssh-client.
+Preparing to unpack .../20-openssh-client_1%3a9.2p1-2+deb12u7_amd64.deb ...
+Unpacking openssh-client (1:9.2p1-2+deb12u7) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../21-libbrotli1_1.0.9-2+b6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2+b6) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../22-libsasl2-modules-db_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../23-libsasl2-2_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../24-libldap-2.5-0_2.5.13+dfsg-5_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../25-libnghttp2-14_1.52.0-1+deb12u2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../26-libpsl5_0.21.2-1_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.2-1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../27-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../28-libssh2-1_1.10.0-3+b1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.10.0-3+b1) ...
+Selecting previously unselected package libcurl3-gnutls:amd64.
+Preparing to unpack .../29-libcurl3-gnutls_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u14) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../30-libexpat1_2.5.0-1+deb12u2_amd64.deb ...
+Unpacking libexpat1:amd64 (2.5.0-1+deb12u2) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../31-liberror-perl_0.17029-2_all.deb ...
+Unpacking liberror-perl (0.17029-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../32-git-man_1%3a2.39.5-0+deb12u3_all.deb ...
+Unpacking git-man (1:2.39.5-0+deb12u3) ...
+Selecting previously unselected package git.
+Preparing to unpack .../33-git_1%3a2.39.5-0+deb12u3_amd64.deb ...
+Unpacking git (1:2.39.5-0+deb12u3) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../34-libldap-common_2.5.13+dfsg-5_all.deb ...
+Unpacking libldap-common (2.5.13+dfsg-5) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../35-libsasl2-modules_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../36-libxau6_1%3a1.0.9-1_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../37-libxdmcp6_1%3a1.1.2-3_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.2-3) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../38-libxcb1_1.15-1_amd64.deb ...
+Unpacking libxcb1:amd64 (1.15-1) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../39-libx11-data_2%3a1.8.4-2+deb12u2_all.deb ...
+Unpacking libx11-data (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../40-libx11-6_2%3a1.8.4-2+deb12u2_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../41-libxext6_2%3a1.3.4-1+b1_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1+b1) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../42-libxmuu1_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../43-patch_2.7.6-7_amd64.deb ...
+Unpacking patch (2.7.6-7) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../44-publicsuffix_20230209.2326-1_all.deb ...
+Unpacking publicsuffix (20230209.2326-1) ...
+Selecting previously unselected package xauth.
+Preparing to unpack .../45-xauth_1%3a1.1.2-1_amd64.deb ...
+Unpacking xauth (1:1.1.2-1) ...
+Setting up libexpat1:amd64 (2.5.0-1+deb12u2) ...
+Setting up libxau6:amd64 (1:1.0.9-1) ...
+Setting up libkeyutils1:amd64 (1.6.3-2) ...
+Setting up libpsl5:amd64 (0.21.2-1) ...
+Setting up libcbor0.8:amd64 (0.8.0-2+b1) ...
+Setting up libbrotli1:amd64 (1.0.9-2+b6) ...
+Setting up libssl3:amd64 (3.0.18-1~deb12u2) ...
+Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Setting up less (590-2.1~deb12u2) ...
+Setting up krb5-locales (1.20.1-2+deb12u4) ...
+Setting up libldap-common (2.5.13+dfsg-5) ...
+Setting up libkrb5support0:amd64 (1.20.1-2+deb12u4) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+Setting up perl-modules-5.36 (5.36.0-7+deb12u3) ...
+Setting up libx11-data (2:1.8.4-2+deb12u2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Setting up patch (2.7.6-7) ...
+Setting up libk5crypto3:amd64 (1.20.1-2+deb12u4) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+Setting up git-man (1:2.39.5-0+deb12u3) ...
+Setting up libssh2-1:amd64 (1.10.0-3+b1) ...
+Setting up netbase (6.4) ...
+Setting up libkrb5-3:amd64 (1.20.1-2+deb12u4) ...
+Setting up libfido2-1:amd64 (1.12.0-2+b1) ...
+Setting up openssl (3.0.18-1~deb12u2) ...
+Setting up libbsd0:amd64 (0.11.7-2) ...
+Setting up publicsuffix (20230209.2326-1) ...
+Setting up libgdbm6:amd64 (1.23-3) ...
+Setting up libxdmcp6:amd64 (1:1.1.2-3) ...
+Setting up libxcb1:amd64 (1.15-1) ...
+Setting up libedit2:amd64 (3.1-20221030-2) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+Setting up libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+Setting up ca-certificates (20230311+deb12u1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+142 added, 0 removed; done.
+Setting up libgssapi-krb5-2:amd64 (1.20.1-2+deb12u4) ...
+Setting up libgdbm-compat4:amd64 (1.23-3) ...
+Setting up libx11-6:amd64 (2:1.8.4-2+deb12u2) ...
+Setting up libperl5.36:amd64 (5.36.0-7+deb12u3) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3) ...
+Setting up openssh-client (1:9.2p1-2+deb12u7) ...
+Setting up libxext6:amd64 (2:1.3.4-1+b1) ...
+Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u14) ...
+Setting up perl (5.36.0-7+deb12u3) ...
+Setting up xauth (1:1.1.2-1) ...
+Setting up liberror-perl (0.17029-2) ...
+Setting up git (1:2.39.5-0+deb12u3) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+Processing triggers for ca-certificates (20230311+deb12u1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+stderr:
+debconf: delaying package configuration, since apt-utils is not installed
+2026-03-05 21:58:14 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command git clone https://github.com/swesmith/Automattic__mongoose.5f57a5bb.git /workspace in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:58:15 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.9s. Got output: stderr:
+Cloning into '/workspace'...
+2026-03-05 21:58:15 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && git checkout Automattic__mongoose.5f57a5bb.func_pm_arg_swap__4qvlr1m6 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:58:16 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.2s. Got output: branch 'Automattic__mongoose.5f57a5bb.func_pm_arg_swap__4qvlr1m6' set up to track 'origin/Automattic__mongoose.5f57a5bb.func_pm_arg_swap__4qvlr1m6'.
+stderr:
+Switched to a new branch 'Automattic__mongoose.5f57a5bb.func_pm_arg_swap__4qvlr1m6'
+2026-03-05 21:58:16 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm install in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:58:49 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 33.6s. Got output: added 1074 packages, and audited 1075 packages in 33s
+
+213 packages are looking for funding
+  run `npm fund` for details
+
+27 vulnerabilities (8 low, 9 moderate, 10 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+stderr:
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated calmcard@0.1.1: no longer maintained
+npm warn deprecated nopter@0.3.0: try optionator
+npm warn deprecated urlobj@0.0.11: use universal-url, minurl, relateurl, url-relation
+npm warn deprecated eslint-plugin-markdown@5.1.0: Please use @eslint/markdown instead
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+npm warn deprecated
+npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated tar@6.2.1: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated uuid@2.0.3: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.11.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.0
+npm notice To update run: npm install -g npm@11.11.0
+npm notice
+2026-03-05 21:58:52 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command find /workspace -type f -name "*.js" | grep -E "(index|schema)" | head -20 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:58:52 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/docs/source/index.js
+/workspace/examples/globalschemas/gs_example.js
+/workspace/examples/globalschemas/person.js
+/workspace/examples/redis-todo/db/index.js
+/workspace/examples/schema/schema.js
+/workspace/examples/schema/storing-schemas-as-json/index.js
+/workspace/index.js
+/workspace/lib/drivers/browser/index.js
+/workspace/lib/drivers/node-mongodb-native/index.js
+/workspace/lib/error/index.js
+/workspace/lib/helpers/indexes/applySchemaCollation.js
+/workspace/lib/helpers/indexes/decorateDiscriminatorIndexOptions.js
+/workspace/lib/helpers/indexes/getRelatedIndexes.js
+/workspace/lib/helpers/indexes/isDefaultIdIndex.js
+/workspace/lib/helpers/indexes/isIndexEqual.js
+/workspace/lib/helpers/indexes/isIndexSpecEqual.js
+/workspace/lib/helpers/indexes/isTextIndex.js
+/workspace/lib/helpers/indexes/isTimeseriesIndex.js
+/workspace/lib/helpers/schema/addAutoId.js
+/workspace/lib/helpers/schema/applyBuiltinPlugins.js
+2026-03-05 21:58:54 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command ls -la /workspace/ in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:58:54 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: total 587
+drwxr-xr-x 1 root root    700 Mar  6 05:58 .
+drwxr-xr-x 1 root root    200 Mar  6 05:58 ..
+-rw-r--r-- 1 root root   5223 Mar  6 05:58 .eslintrc.js
+drwxr-xr-x 1 root root    380 Mar  6 05:58 .git
+drwxr-xr-x 1 root root    140 Mar  6 05:58 .github
+-rw-r--r-- 1 root root    993 Mar  6 05:58 .gitignore
+-rw-r--r-- 1 root root   2378 Mar  6 05:58 .markdownlint-cli2.cjs
+-rw-r--r-- 1 root root    219 Mar  6 05:58 .mocharc.yml
+-rw-r--r-- 1 root root    594 Mar  6 05:58 .npmignore
+-rw-r--r-- 1 root root     19 Mar  6 05:58 .npmrc
+-rw-r--r-- 1 root root 542791 Mar  6 05:58 CHANGELOG.md
+-rw-r--r-- 1 root root     15 Mar  6 05:58 CNAME
+-rw-r--r-- 1 root root   7249 Mar  6 05:58 CONTRIBUTING.md
+-rw-r--r-- 1 root root     58 Mar  6 05:58 History.md
+-rw-r--r-- 1 root root   1130 Mar  6 05:58 LICENSE.md
+-rw-r--r-- 1 root root  13523 Mar  6 05:58 README.md
+-rw-r--r-- 1 root root    125 Mar  6 05:58 SECURITY.md
+drwxr-xr-x 1 root root    200 Mar  6 05:58 benchmarks
+-rw-r--r-- 1 root root     93 Mar  6 05:58 browser.js
+drwxr-xr-x 1 root root   1180 Mar  6 05:58 docs
+drwxr-xr-x 1 root root    320 Mar  6 05:58 examples
+-rw-r--r-- 1 root root   2597 Mar  6 05:58 index.js
+-rw-r--r-- 1 root root   6147 Mar  6 05:58 index.pug
+-rw-r--r-- 1 root root    136 Mar  6 05:58 lgtm.yml
+drwxr-xr-x 1 root root    720 Mar  6 05:58 lib
+-rw-r--r-- 1 root root     99 Mar  6 05:58 migrating_to_5.md
+drwxr-xr-x 1 root root  13740 Mar  6 05:58 node_modules
+-rw-r--r-- 1 root root   6316 Mar  6 05:58 package.json
+-rw-r--r-- 1 root root   1055 Mar  6 05:58 release-items.md
+drwxr-xr-x 1 root root    220 Mar  6 05:58 scripts
+drwxr-xr-x 1 root root   2020 Mar  6 05:58 test
+drwxr-xr-x 1 root root    100 Mar  6 05:58 tools
+-rw-r--r-- 1 root root    144 Mar  6 05:58 tsconfig.json
+drwxr-xr-x 1 root root    580 Mar  6 05:58 types
+-rw-r--r-- 1 root root   1329 Mar  6 05:58 webpack.config.js
+2026-03-05 21:58:55 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -r "createIndex" /workspace/lib --include="*.js" | head -20 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:58:55 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/lib/collection.js:Collection.prototype.createIndex = function() {
+/workspace/lib/collection.js:  throw new Error('Collection#createIndex unimplemented by driver');
+/workspace/lib/schema.js: * @param {Object} [options] Options to pass to [MongoDB driver's `createIndex()` function](https://mongodb.github.io/node-mongodb-native/4.9/classes/Collection.html#createIndex)
+/workspace/lib/model.js: *     await Customer.collection.createIndex({ age: 1 }); // Index is not in schema
+/workspace/lib/model.js:  await this.createIndexes({ ...options, toCreate: diffIndexesResult.toCreate });
+/workspace/lib/model.js: * Sends `createIndex` commands to mongo for each index declared in the schema.
+/workspace/lib/model.js: * The `createIndex` commands are sent in series.
+/workspace/lib/model.js: * Similar to `ensureIndexes()`, except for it uses the [`createIndex`](https://mongodb.github.io/node-mongodb-native/4.9/classes/Db.html#createIndex)
+/workspace/lib/model.js:Model.createIndexes = async function createIndexes(options) {
+/workspace/lib/model.js:  _checkContext(this, 'createIndexes');
+/workspace/lib/model.js:    throw new MongooseError('Model.createIndexes() no longer accepts a callback');
+/workspace/lib/model.js:    // Just in case `createIndex()` throws a sync error
+/workspace/lib/model.js:      promise = model.collection.createIndex(indexOptions, indexFields);
+2026-03-05 21:58:57 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -A 30 "promise = model.collection.createIndex" /workspace/lib/model.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:58:57 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: promise = model.collection.createIndex(indexOptions, indexFields);
+    } catch (err) {
+      if (!indexError) {
+        indexError = err;
+      }
+      if (!model.$caught) {
+        model.emit('error', err);
+      }
+
+      indexSingleDone(err, indexFields, indexOptions);
+      create();
+      return;
+    }
+
+    promise.then(
+      name => {
+        indexSingleDone(indexFields, null, indexOptions, name);
+        create();
+      },
+      err => {
+        if (!indexError) {
+          indexError = err;
+        }
+        if (!model.$caught) {
+          model.emit('error', err);
+        }
+
+        indexSingleDone(err, indexFields, indexOptions);
+        create();
+      }
+    );
+2026-03-05 21:58:59 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -B 20 "promise = model.collection.createIndex" /workspace/lib/model.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:58:59 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: return create();
+    }
+
+    const indexFields = clone(index[0]);
+    const indexOptions = clone(index[1]);
+
+    delete indexOptions._autoIndex;
+    decorateDiscriminatorIndexOptions(model.schema, indexOptions);
+    applyWriteConcern(model.schema, indexOptions);
+    applySchemaCollation(indexOptions, indexFields, model.schema.options);
+
+    indexSingleStart(indexFields, options);
+
+    if ('background' in options) {
+      indexOptions.background = options.background;
+    }
+
+    // Just in case `createIndex()` throws a sync error
+    let promise = null;
+    try {
+      promise = model.collection.createIndex(indexOptions, indexFields);
+2026-03-05 21:59:00 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -A 20 "Collection.prototype.createIndex" /workspace/lib/collection.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:00 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: Collection.prototype.createIndex = function() {
+  throw new Error('Collection#createIndex unimplemented by driver');
+};
+
+/**
+ * Abstract method that drivers must implement.
+ */
+
+Collection.prototype.findAndModify = function() {
+  throw new Error('Collection#findAndModify unimplemented by driver');
+};
+
+/**
+ * Abstract method that drivers must implement.
+ */
+
+Collection.prototype.findOneAndUpdate = function() {
+  throw new Error('Collection#findOneAndUpdate unimplemented by driver');
+};
+
+/**
+2026-03-05 21:59:02 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -A 10 "createIndex" /workspace/lib/drivers/node-mongodb-native/index.js | head -30 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:02 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 21:59:03 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command ls -la /workspace/lib/drivers/ in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:03 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: total 1
+drwxr-xr-x 1 root root 100 Mar  6 05:58 .
+drwxr-xr-x 1 root root 720 Mar  6 05:58 ..
+-rw-r--r-- 1 root root  21 Mar  6 05:58 SPEC.md
+drwxr-xr-x 1 root root 120 Mar  6 05:58 browser
+drwxr-xr-x 1 root root 120 Mar  6 05:58 node-mongodb-native
+2026-03-05 21:59:05 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command ls -la /workspace/lib/drivers/node-mongodb-native/ in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:05 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: total 32
+drwxr-xr-x 1 root root   120 Mar  6 05:58 .
+drwxr-xr-x 1 root root   100 Mar  6 05:58 ..
+-rw-r--r-- 1 root root   126 Mar  6 05:58 bulkWriteResult.js
+-rw-r--r-- 1 root root 14580 Mar  6 05:58 collection.js
+-rw-r--r-- 1 root root 16283 Mar  6 05:58 connection.js
+-rw-r--r-- 1 root root   255 Mar  6 05:58 index.js
+2026-03-05 21:59:07 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -A 10 "createIndex" /workspace/lib/drivers/node-mongodb-native/collection.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:07 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 21:59:08 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -r "createIndex" /workspace/lib --include="*.js" -B 2 -A 2 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:09 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/lib/collection.js- */
+/workspace/lib/collection.js-
+/workspace/lib/collection.js:Collection.prototype.createIndex = function() {
+/workspace/lib/collection.js:  throw new Error('Collection#createIndex unimplemented by driver');
+/workspace/lib/collection.js-};
+/workspace/lib/collection.js-
+--
+/workspace/lib/schema.js- *
+/workspace/lib/schema.js- * @param {Object} fields The Fields to index, with the order, available values: `1 | -1 | '2d' | '2dsphere' | 'geoHaystack' | 'hashed' | 'text'`
+/workspace/lib/schema.js: * @param {Object} [options] Options to pass to [MongoDB driver's `createIndex()` function](https://mongodb.github.io/node-mongodb-native/4.9/classes/Collection.html#createIndex)
+/workspace/lib/schema.js- * @param {String | number} [options.expires=null] Mongoose-specific syntactic sugar, uses [ms](https://www.npmjs.com/package/ms) to convert `expires` option into seconds for the `expireAfterSeconds` in the above link.
+/workspace/lib/schema.js- * @param {String} [options.language_override=null] Tells mongodb to use the specified field instead of `language` for parsing text indexes.
+--
+/workspace/lib/model.js- *     const schema = new Schema({ name: { type: String, unique: true } });
+/workspace/lib/model.js- *     const Customer = mongoose.model('Customer', schema);
+/workspace/lib/model.js: *     await Customer.collection.createIndex({ age: 1 }); // Index is not in schema
+/workspace/lib/model.js- *     // Will drop the 'age' index and create an index on `name`
+/workspace/lib/model.js- *     await Customer.syncIndexes();
+--
+/workspace/lib/model.js-  const diffIndexesResult = await this.diffIndexes({ indexOptionsToCreate: true });
+/workspace/lib/model.js-  const dropped = await this.cleanIndexes({ ...options, toDrop: diffIndexesResult.toDrop });
+/workspace/lib/model.js:  await this.createIndexes({ ...options, toCreate: diffIndexesResult.toCreate });
+/workspace/lib/model.js-
+/workspace/lib/model.js-  return dropped;
+--
+/workspace/lib/model.js-
+/workspace/lib/model.js-/**
+/workspace/lib/model.js: * Sends `createIndex` commands to mongo for each index declared in the schema.
+/workspace/lib/model.js: * The `createIndex` commands are sent in series.
+/workspace/lib/model.js- *
+/workspace/lib/model.js- * #### Example:
+--
+/workspace/lib/model.js-
+/workspace/lib/model.js-/**
+/workspace/lib/model.js: * Similar to `ensureIndexes()`, except for it uses the [`createIndex`](https://mongodb.github.io/node-mongodb-native/4.9/classes/Db.html#createIndex)
+/workspace/lib/model.js- * function.
+/workspace/lib/model.js- *
+--
+/workspace/lib/model.js- */
+/workspace/lib/model.js-
+/workspace/lib/model.js:Model.createIndexes = async function createIndexes(options) {
+/workspace/lib/model.js:  _checkContext(this, 'createIndexes');
+/workspace/lib/model.js-
+/workspace/lib/model.js-  if (typeof arguments[0] === 'function' || typeof arguments[1] === 'function') {
+/workspace/lib/model.js:    throw new MongooseError('Model.createIndexes() no longer accepts a callback');
+/workspace/lib/model.js-  }
+/workspace/lib/model.js-
+--
+/workspace/lib/model.js-    }
+/workspace/lib/model.js-
+/workspace/lib/model.js:    // Just in case `createIndex()` throws a sync error
+/workspace/lib/model.js-    let promise = null;
+/workspace/lib/model.js-    try {
+/workspace/lib/model.js:      promise = model.collection.createIndex(indexOptions, indexFields);
+/workspace/lib/model.js-    } catch (err) {
+/workspace/lib/model.js-      if (!indexError) {
+2026-03-05 21:59:10 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat /workspace/lib/drivers/node-mongodb-native/collection.js | head -100 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:10 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 'use strict';
+
+/*!
+ * Module dependencies.
+ */
+
+const MongooseCollection = require('../../collection');
+const MongooseError = require('../../error/mongooseError');
+const Collection = require('mongodb').Collection;
+const ObjectId = require('../../types/objectid');
+const getConstructorName = require('../../helpers/getConstructorName');
+const internalToObjectOptions = require('../../options').internalToObjectOptions;
+const stream = require('stream');
+const util = require('util');
+
+const formatToObjectOptions = Object.freeze({ ...internalToObjectOptions, copyTrustedSymbol: false });
+
+/**
+ * A [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) collection implementation.
+ *
+ * All methods methods from the [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) driver are copied and wrapped in queue management.
+ *
+ * @inherits Collection https://mongodb.github.io/node-mongodb-native/4.9/classes/Collection.html
+ * @api private
+ */
+
+function NativeCollection(name, conn, options) {
+  this.collection = null;
+  this.Promise = options.Promise || Promise;
+  this.modelName = options.modelName;
+  delete options.modelName;
+  this._closed = false;
+  MongooseCollection.apply(this, arguments);
+}
+
+/*!
+ * Inherit from abstract Collection.
+ */
+
+Object.setPrototypeOf(NativeCollection.prototype, MongooseCollection.prototype);
+
+/**
+ * Called when the connection opens.
+ *
+ * @api private
+ */
+
+NativeCollection.prototype.onOpen = function() {
+  this.collection = this.conn.db.collection(this.name);
+  MongooseCollection.prototype.onOpen.call(this);
+  return this.collection;
+};
+
+/**
+ * Called when the connection closes
+ *
+ * @api private
+ */
+
+NativeCollection.prototype.onClose = function(force) {
+  MongooseCollection.prototype.onClose.call(this, force);
+};
+
+/**
+ * Helper to get the collection, in case `this.collection` isn't set yet.
+ * May happen if `bufferCommands` is false and created the model when
+ * Mongoose was disconnected.
+ *
+ * @api private
+ */
+
+NativeCollection.prototype._getCollection = function _getCollection() {
+  if (this.collection) {
+    return this.collection;
+  }
+  if (this.conn.db != null) {
+    this.collection = this.conn.db.collection(this.name);
+    return this.collection;
+  }
+  return null;
+};
+
+/*!
+ * ignore
+ */
+
+const syncCollectionMethods = { watch: true, find: true, aggregate: true };
+
+/**
+ * Copy the collection methods and make them subject to queues
+ * @param {Number|String} I
+ * @api private
+ */
+
+function iter(i) {
+  NativeCollection.prototype[i] = function() {
+    const collection = this._getCollection();
+    const args = Array.from(arguments);
+    const _this = this;
+    const globalDebug = _this &&
+2026-03-05 21:59:12 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "createIndex" /workspace/lib/drivers/node-mongodb-native/collection.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:12 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 21:59:13 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -r "collection.createIndex" /workspace/test --include="*.js" | head -10 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:14 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/test/model.indexes.test.js:      await User.collection.createIndex({ age: 1 });
+/workspace/test/model.indexes.test.js:      await User.collection.createIndex({ weight: 1 });
+/workspace/test/model.querying.test.js:        await blogPost.collection.createIndex({ title: 'text' });
+/workspace/test/model.querying.test.js:      await blogPost.collection.createIndex({ title: 'text' });
+/workspace/test/model.test.js:        await User.collection.createIndex({ age: 1 });
+/workspace/test/model.test.js:        await User.collection.createIndex({ age: 1 });
+/workspace/test/model.test.js:        await User.collection.createIndex({ age: -1, name: 1 });
+/workspace/test/model.test.js:        await User.collection.createIndex({ name: 1, _id: 1 });
+/workspace/test/model.test.js:          assert.equal(M.collection.createIndex.getCalls().length, 0);
+2026-03-05 21:59:15 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -r "\.createIndex\(" /workspace/test --include="*.js" -A 1 | head -20 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:15 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: stderr:
+grep: Unmatched ( or \(
+2026-03-05 21:59:17 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -r "createIndex" /workspace/test --include="*.js" -A 1 | head -30 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:18 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/test/model.indexes.test.js:      await M.createIndexes();
+/workspace/test/model.indexes.test.js-
+--
+/workspace/test/model.indexes.test.js:      await User.collection.createIndex({ age: 1 });
+/workspace/test/model.indexes.test.js:      await User.collection.createIndex({ weight: 1 });
+/workspace/test/model.indexes.test.js-      await User.init();
+--
+/workspace/test/model.insertMany.test.js:    await Movie.createIndexes();
+/workspace/test/model.insertMany.test.js-
+--
+/workspace/test/model.querying.test.js:        await blogPost.collection.createIndex({ title: 'text' });
+/workspace/test/model.querying.test.js-        const a = new blogPost({ title: 'querying in mongoose' });
+--
+/workspace/test/model.querying.test.js:      await blogPost.collection.createIndex({ title: 'text' });
+/workspace/test/model.querying.test.js-      const a = new blogPost({ title: 'searching in mongoose' });
+--
+/workspace/test/model.test.js:      await Person.createIndexes();
+/workspace/test/model.test.js-
+--
+/workspace/test/model.test.js:      await Person.createIndexes();
+/workspace/test/model.test.js-
+--
+/workspace/test/model.test.js:      await Person.createIndexes();
+/workspace/test/model.test.js-
+--
+/workspace/test/model.test.js:      await Person.createIndexes();
+/workspace/test/model.test.js-
+--
+/workspace/test/model.test.js:      await Person.createIndexes();
+/workspace/test/model.test.js-
+2026-03-05 21:59:19 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -r "createIndex" /workspace/node_modules/mongodb --include="*.d.ts" | grep "createIndex" | head -5 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:19 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: /workspace/node_modules/mongodb/lib/beta.d.ts: * @see https://www.mongodb.com/docs/manual/reference/change-events/createIndexes/#mongodb-data-createIndexes
+/workspace/node_modules/mongodb/lib/beta.d.ts:    operationType: 'createIndexes';
+/workspace/node_modules/mongodb/lib/beta.d.ts:     * - createIndexes
+/workspace/node_modules/mongodb/lib/beta.d.ts:     * await collection.createIndex({ a: 1, b: -1 });
+/workspace/node_modules/mongodb/lib/beta.d.ts:     * await collection.createIndex([ [c, 1], [d, -1] ]);
+2026-03-05 21:59:21 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -A 2 "await collection.createIndex" /workspace/node_modules/mongodb/lib/beta.d.ts | head -15 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:21 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: * await collection.createIndex({ a: 1, b: -1 });
+     *
+     * // Alternate syntax for { c: 1, d: -1 } that ensures order of indexes
+     * await collection.createIndex([ [c, 1], [d, -1] ]);
+     *
+     * // Equivalent to { e: 1 }
+     * await collection.createIndex('e');
+     *
+     * // Equivalent to { f: 1, g: 1 }
+     * await collection.createIndex(['f', 'g'])
+     *
+     * // Equivalent to { h: 1, i: -1 }
+     * await collection.createIndex([ { h: 1 }, { i: -1 } ]);
+     *
+     * // Equivalent to { j: 1, k: -1, l: 2d }
+2026-03-05 21:59:23 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -B 5 "await collection.createIndex" /workspace/node_modules/mongodb/lib/beta.d.ts | grep "createIndex" | head -3 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:23 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: * await collection.createIndex({ a: 1, b: -1 });
+     * await collection.createIndex([ [c, 1], [d, -1] ]);
+     * await collection.createIndex('e');
+2026-03-05 21:59:24 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -A 10 "createIndex(" /workspace/node_modules/mongodb/lib/beta.d.ts | grep -A 5 "createIndex.*IndexSpecification" in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:24 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: createIndex(indexSpec: IndexSpecification, options?: CreateIndexesOptions): Promise<string>;
+    /**
+     * Creates multiple indexes in the collection, this method is only supported for
+     * MongoDB 2.6 or higher. Earlier version of MongoDB will throw a command not supported
+     * error.
+     *
+--
+    createIndex(name: string, indexSpec: IndexSpecification, options?: CreateIndexesOptions): Promise<string>;
+    /**
+     * Remove a user from a database
+     *
+     * @param username - The username to remove
+     * @param options - Optional settings for the command
+2026-03-05 21:59:27 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command grep -n "createIndex" /workspace/lib/model.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:27 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: 1283: *     await Customer.collection.createIndex({ age: 1 }); // Index is not in schema
+1325:  await this.createIndexes({ ...options, toCreate: diffIndexesResult.toCreate });
+1604: * Sends `createIndex` commands to mongo for each index declared in the schema.
+1605: * The `createIndex` commands are sent in series.
+1646: * Similar to `ensureIndexes()`, except for it uses the [`createIndex`](https://mongodb.github.io/node-mongodb-native/4.9/classes/Db.html#createIndex)
+1654:Model.createIndexes = async function createIndexes(options) {
+1655:  _checkContext(this, 'createIndexes');
+1658:    throw new MongooseError('Model.createIndexes() no longer accepts a callback');
+1754:    // Just in case `createIndex()` throws a sync error
+1757:      promise = model.collection.createIndex(indexOptions, indexFields);
+2026-03-05 21:59:28 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1740,1800p' /workspace/lib/model.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:28 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: const indexFields = clone(index[0]);
+    const indexOptions = clone(index[1]);
+
+    delete indexOptions._autoIndex;
+    decorateDiscriminatorIndexOptions(model.schema, indexOptions);
+    applyWriteConcern(model.schema, indexOptions);
+    applySchemaCollation(indexOptions, indexFields, model.schema.options);
+
+    indexSingleStart(indexFields, options);
+
+    if ('background' in options) {
+      indexOptions.background = options.background;
+    }
+
+    // Just in case `createIndex()` throws a sync error
+    let promise = null;
+    try {
+      promise = model.collection.createIndex(indexOptions, indexFields);
+    } catch (err) {
+      if (!indexError) {
+        indexError = err;
+      }
+      if (!model.$caught) {
+        model.emit('error', err);
+      }
+
+      indexSingleDone(err, indexFields, indexOptions);
+      create();
+      return;
+    }
+
+    promise.then(
+      name => {
+        indexSingleDone(indexFields, null, indexOptions, name);
+        create();
+      },
+      err => {
+        if (!indexError) {
+          indexError = err;
+        }
+        if (!model.$caught) {
+          model.emit('error', err);
+        }
+
+        indexSingleDone(err, indexFields, indexOptions);
+        create();
+      }
+    );
+  }
+}
+
+/**
+ * Schema the model uses.
+ *
+ * @property schema
+ * @static
+ * @api public
+ * @memberOf Model
+ */
+
+Model.schema;
+2026-03-05 21:59:31 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cat > /tmp/test_index.js << 'EOF'
+const mongoose = require('mongoose');
+
+async function run() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/testdb');
+
+  const schema = new mongoose.Schema({ name: String });
+  // trying to create an index with options
+  schema.index({ name: 1 }, { background: true, name: 'background_true' });
+
+  const Model = mongoose.model('Person', schema);
+
+  try {
+    await Model.init();
+    console.log('index created successfully');
+  } catch (err) {
+    console.error('ERROR:', err.message);
+  } finally {
+    await mongoose.disconnect();
+  }
+}
+
+run();
+EOF
+cat /tmp/test_index.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:31 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: const mongoose = require('mongoose');
+
+async function run() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/testdb');
+
+  const schema = new mongoose.Schema({ name: String });
+  // trying to create an index with options
+  schema.index({ name: 1 }, { background: true, name: 'background_true' });
+
+  const Model = mongoose.model('Person', schema);
+
+  try {
+    await Model.init();
+    console.log('index created successfully');
+  } catch (err) {
+    console.error('ERROR:', err.message);
+  } finally {
+    await mongoose.disconnect();
+  }
+}
+
+run();
+2026-03-05 21:59:33 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1755,1760p' /workspace/lib/model.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:33 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: let promise = null;
+    try {
+      promise = model.collection.createIndex(indexOptions, indexFields);
+    } catch (err) {
+      if (!indexError) {
+        indexError = err;
+2026-03-05 21:59:35 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -i 's/model.collection.createIndex(indexOptions, indexFields)/model.collection.createIndex(indexFields, indexOptions)/' /workspace/lib/model.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:35 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: (no output)
+2026-03-05 21:59:37 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command sed -n '1755,1760p' /workspace/lib/model.js in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:37 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 0.1s. Got output: let promise = null;
+    try {
+      promise = model.collection.createIndex(indexFields, indexOptions);
+    } catch (err) {
+      if (!indexError) {
+        indexError = err;
+2026-03-05 21:59:38 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && npm test 2>&1 | head -100 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:43 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 4.9s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+Downloading MongoDB "7.0.14": 0% (0mb / 80.8mb)
+Downloading MongoDB "7.0.14": 100% (80.8mb / 80.8mb)
+Downloading MongoDB "7.0.14": 100% (0mb / 0mb)
+Starting the MongoMemoryServer Instance failed, enable debug log for more information. Error:
+ StdoutInstanceError: Instance failed to start because a library is missing or cannot be opened: "libcurl.so.4"
+    at MongoInstance.checkErrorInLine (/workspace/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:392:62)
+    at MongoInstance.stderrHandler (/workspace/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:318:14)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+/workspace/test/common.js:189
+  throw error;
+  ^
+
+StdoutInstanceError: Instance failed to start because a library is missing or cannot be opened: "libcurl.so.4"
+    at MongoInstance.checkErrorInLine (/workspace/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:392:62)
+    at MongoInstance.stderrHandler (/workspace/node_modules/mongodb-memory-server-core/lib/util/MongoInstance.js:318:14)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+
+Node.js v20.20.0
+2026-03-05 21:59:45 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command apt-get update -qq && apt-get install -qq -y libcurl4 > /dev/null 2>&1 && echo "libcurl4 installed" in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:47 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 2.3s. Got output: libcurl4 installed
+2026-03-05 21:59:49 - verifiers.envs.environment.SweJsEnv - DEBUG - Executing command cd /workspace && timeout 120 npm test 2>&1 | head -200 in sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:53 - verifiers.envs.environment.SweJsEnv - DEBUG - Executed command in 4.5s. Got output: > mongoose@8.15.1 test
+> mocha --exit ./test/*.test.js
+
+[31m
+You're not testing shards!
+Please set the MONGOOSE_SHARD_TEST_URI env variable.
+e.g: `mongodb://127.0.0.1:27017/database
+Sharding must already be enabled on your database
+[39m
+
+
+  aggregate: 
+    ✔ cursor (gh-3160)
+    ✔ catch() (gh-7267)
+    ✔ cursor() without options (gh-3855)
+    ✔ cursor() with useMongooseAggCursor (gh-5145)
+    ✔ cursor() with useMongooseAggCursor works (gh-5145) (gh-5394)
+    ✔ cursor() eachAsync (gh-4300) (114ms)
+    ✔ cursor() eachAsync with options (parallel) (114ms)
+    ✔ is now a proper aggregate cursor vs what it was before gh-10410
+    ✔ query by document (gh-4866)
+    ✔ sort by text score (gh-5258)
+    ✔ cursor supports transform option (gh-14331)
+    ✔ should not throw error if database connection has not been established (gh-13125)
+    ✔ throws error if calling near() with empty coordinates (gh-15188)
+    ✔ cursor() errors out if schema pre aggregate hook throws an error (gh-15279)
+    append
+      ✔ (pipeline)
+      ✔ supports array as single argument
+      ✔ throws if non-operator parameter is passed
+      ✔ does not throw when 0 args passed
+      ✔ does not throw when empty array is passed as single argument
+    project
+      ✔ (object)
+      ✔ (string)
+      ✔ ("a","b","c")
+      ✔ ["a","b","c"]
+    group
+      ✔ works
+    skip
+      ✔ works
+    limit
+      ✔ works
+    unwind
+      ✔ ("field")
+    match
+      ✔ works
+    sort
+      ✔ (object)
+      ✔ (string)
+      ✔ ("a","b","c")
+      ✔ ["a","b","c"]
+    near
+      ✔ works
+      ✔ works with discriminators (gh-3304)
+    lookup
+      ✔ works
+    unionWith
+      ✔ works
+    sample
+      ✔ works
+    densify
+      ✔ works
+    fill
+      ✔ works
+    model()
+      ✔ works
+    redact
+      ✔ works
+      ✔ works with (condition, string, string)
+    Mongo 3.4 operators
+      graphLookup
+        ✔ works
+        ✔ automatically prepends $ to the startWith field
+        ✔ Throws if no options are passed to graphLookup
+      addFields
+        ✔ should throw if passed a non object
+        ✔ should throw if passed null
+        ✔ should throw if passed an Array
+        ✔ (object)
+      facet
+        ✔ works
+      replaceRoot
+        ✔ works with a string
+        ✔ works with an object (gh-6474)
+      count
+        ✔ works
+      sortByCount
+        ✔ works with a string argument
+        ✔ works with an object argument
+        ✔ throws if the argument is neither a string or object
+    exec
+      ✔ project
+      ✔ group
+      ✔ skip
+      ✔ limit
+      ✔ unwind
+      ✔ unwind with obj
+      ✔ unwind throws with bad arg
+      ✔ match
+      ✔ sort
+      ✔ graphLookup
+      ✔ facet
+      ✔ complex pipeline
+      ✔ pipeline() (gh-5825)
+      ✔ explain()
+      ✔ handles aggregation options
+      ✔ readPref from schema (gh-5522)
+      error when empty pipeline
+        ✔ without a callback
+      error when not bound to a model
+        ✔ with callback
+      middleware (gh-5251)
+        ✔ pre
+        ✔ setting option in pre (gh-7606)
+        ✔ adding to pipeline in pre (gh-8017)
+        ✔ post
+        ✔ error handler with agg error
+        ✔ error handler with pre error
+        ✔ with agg cursor
+        ✔ with explain() (gh-5887)
+    Mongo 3.6 options
+      ✔ adds hint option
+
+  BigInt
+    ✔ is a valid schema type
+    ✔ casting from strings and numbers
+    ✔ handles cast errors
+    ✔ supports required
+    MongoDB integration
+      ✔ is stored as a long in MongoDB
+      ✔ becomes a bigint with lean using useBigInt64
+      ✔ can query with comparison operators
+      ✔ supports populate()
+
+  browser
+    ✔ require() works with no other require calls (gh-5842) (134ms)
+    ✔ using schema (gh-7170) (131ms)
+    ✔ document works (gh-4987)
+    ✔ document validation with arrays (gh-6175)
+
+  cast: 
+    ✔ uses nested schema strict by default (gh-11291)
+    ✔ casts $comment (gh-14576)
+    ✔ avoids setting stripped out nested schema values to undefined (gh-11291)
+    ✔ uses schema-level strictQuery over schema-level strict (gh-12508)
+    ✔ handles $in with discriminators if $in has exactly 1 element (gh-13492)
+    ✔ treats unknown operators as passthrough (gh-15170)
+    when casting an array
+      ✔ casts array with ObjectIds to $in query
+      ✔ casts array with ObjectIds to $in query when values are strings
+      ✔ throws when ObjectIds not valid
+      ✔ casts array with Strings to $in query
+      ✔ casts array with Strings when necessary
+      ✔ casts array with Numbers to $in query
+      ✔ casts $in and $nin with empty array (gh-5913) (gh-7806)
+      ✔ casts array with Numbers to $in query when values are strings
+      ✔ throws when Numbers are not valid
+    $all
+      ✔ casts $elemMatch (gh-11314)
+    bitwise query operators: 
+      ✔ with a number
+      ✔ with an array
+      ✔ with a buffer
+      ✔ with int32 (gh-15170)
+      ✔ throws when invalid
+    $expr
+      ✔ does not get filtered out (gh-10662)
+
+  collections: capped:
+    ✔ schemas should have option size
+    ✔ creation (116ms)
+    ✔ skips when setting autoCreate to false (gh-8566)
+
+  collections:
+    ✔ should buffer commands until connection is established
+    ✔ returns a promise if buffering and no callback (gh-7676)
+    ✔ returns a promise if buffering and callback with find() (gh-14184) (101ms)
+    ✔ handles bufferTimeoutMS in schemaUserProvidedOptions (101ms)
+    ✔ methods should that throw (unimplemented)
+    ✔ buffers for sync methods (gh-10610)
+
+  connections:
+    ✔ should allow closing a closed connection
+    ✔ should return an error if malformed uri passed
+    ✔ force close (gh-5664) (103ms)
+    ✔ destroy connection and remove it permanently
+    ✔ verify that attempt to re-open destroyed connection throws error, via promise
+    ✔ verify that attempt to re-open destroyed connection throws error, via callback
+    ✔ force close with connection created after close (gh-5664) (103ms)
+    ✔ bufferCommands (gh-5720)
+    ✔ dbName option (gh-6106)
+    ✔ uses default database in uri if options.dbName is not provided
+    ✔ startSession() (gh-6653)
+    ✔ deleteModel()
+    ✔ throws a MongooseServerSelectionError on server selection timeout (gh-8451) (108ms)
+    ✔ avoids unhandled error on createConnection() if error handler registered (gh-14377) (102ms)
+    - `watch()` on a whole collection (gh-8425)
+    ✔ useDB inherits config from default connection (gh-8267)
+2026-03-05 21:59:55 - verifiers.envs.environment.SweJsEnv - DEBUG - Deleted sandbox kn69ilpk87nnm6i279jzgz3l
+2026-03-05 21:59:55 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Received signal SIGTERM, initiating graceful shutdown
+2026-03-05 21:59:56 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Stop event received, shutting down gracefully
+2026-03-05 21:59:56 - verifiers.workers.server.env_server.ZMQEnvServer - INFO - Environment server shut down
